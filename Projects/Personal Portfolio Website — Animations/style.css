@@ -22,6 +22,7 @@
             align-items: center;
             padding: 0px 50px;
             margin-top: 20px;
+            animation: slideInDown 0.8s ease-in forwards;
         }
 
         .home-page .header .header-c1 {
@@ -117,7 +118,7 @@
             font-weight: 800;
             font-family: "Londrina Outline", cursive;
             letter-spacing: 15%;
-            
+            animation: slideInDown 0.5s ease-in forwards;
         }
 
         .home-page .hero .bottom-layer .text .text2 {
@@ -125,7 +126,7 @@
             font-weight: 800;
             font-family: 'Nunito', sans-serif;
             letter-spacing: -10px;
-            
+            animation: slideInDown 0.5s ease-in forwards;
         }
 
         .home-page .hero .bottom-layer .menu {
@@ -148,6 +149,7 @@
             font-size: 40px;
             font-weight: 800;
             font-family: 'Nunito', sans-serif;
+            animation: slideInUp 0.8s ease-in forwards;
         }
 
         .home-page .hero .bottom-layer .menu .menu1 p {
@@ -155,6 +157,7 @@
             font-weight: 500;
             font-family: 'Nunito', sans-serif;
             color: #5c5a5a;
+            animation: slideInUp 0.8s ease-in forwards;
         }
 
         .home-page .hero .bottom-layer .menu .menu1 .collaborate {
@@ -170,6 +173,7 @@
             color: #fff;
             font-family: 'Nunito', sans-serif;
             font-weight: 700;
+            animation: slideInUp 0.8s ease-in forwards;
         }
 
         .home-page .hero .bottom-layer .menu .menu1 .collaborate i {
@@ -181,6 +185,7 @@
             flex-direction: column;
             gap: 20px;
             padding-right: 50px;
+            animation: slideInUp 1.2s ease-in forwards;
         }
 
         .home-page .hero .bottom-layer .menu .menu2 .m1 {
@@ -197,6 +202,7 @@
             font-family: 'Nunito', sans-serif;
             font-size: 20px;
             font-weight: 700;
+            animation: fadeInUp 1.4s ease-in forwards;
             
         }
 
@@ -214,7 +220,7 @@
             font-family: 'Nunito', sans-serif;
             font-size: 20px;
             font-weight: 700;
-            
+            animation: fadeInUp 1.6s ease-in forwards;
         }
 
         .home-page .hero .bottom-layer .menu .menu2 .m3 {
@@ -231,7 +237,7 @@
             font-family: 'Nunito', sans-serif;
             font-size: 20px;
             font-weight: 700;
-            
+            animation: fadeInUp 1.8s ease-in forwards;
         }
 
         .home-page .hero .bottom-layer .menu .menu2 .m4 {
@@ -248,7 +254,7 @@
             font-family: 'Nunito', sans-serif;
             font-size: 20px;
             font-weight: 700;
-            
+            animation: fadeInUp 2s ease-in forwards;
         }
 
         .home-page .hero .upper-layer {
@@ -274,5 +280,5 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            animation: rubberBand 2s ease forwards;
+            animation: fadeInUp 2s ease-in forwards;
         }
