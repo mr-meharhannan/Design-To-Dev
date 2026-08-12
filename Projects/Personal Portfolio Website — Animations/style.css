@@ -4,100 +4,6 @@
             box-sizing: border-box;
         }
 
-        @keyframes text1 {
-            from {
-                opacity: 0;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes text2 {
-            from {
-                opacity: 0;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            
-        }
-        @keyframes header {
-            from {
-                opacity: 0;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            
-        }
-        @keyframes menu1 {
-            from {
-                opacity: 0;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            
-        }
-        @keyframes m1 {
-            from {
-                opacity: 0;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes m2 {
-            from {
-                opacity: 0;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes m3 {
-            from {
-                opacity: 0;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes m4 {
-            from {
-                opacity: 0;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes img {
-            from {
-                opacity: 0;
-                transform: translateY(0);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            
-        }
 
 
         .home-page {
@@ -116,7 +22,6 @@
             align-items: center;
             padding: 0px 50px;
             margin-top: 20px;
-            animation: header 2s ease forwards;
         }
 
         .home-page .header .header-c1 {
@@ -212,7 +117,7 @@
             font-weight: 800;
             font-family: "Londrina Outline", cursive;
             letter-spacing: 15%;
-            animation: text1 1s ease forwards;
+            
         }
 
         .home-page .hero .bottom-layer .text .text2 {
@@ -220,7 +125,7 @@
             font-weight: 800;
             font-family: 'Nunito', sans-serif;
             letter-spacing: -10px;
-            animation: text2 1s ease forwards;
+            
         }
 
         .home-page .hero .bottom-layer .menu {
@@ -236,7 +141,7 @@
             flex-direction: column;
             gap: 10px;
             padding-left: 50px;
-            animation: menu1 3s ease forwards;
+            
         }
 
         .home-page .hero .bottom-layer .menu .menu1 h1 {
@@ -292,7 +197,7 @@
             font-family: 'Nunito', sans-serif;
             font-size: 20px;
             font-weight: 700;
-            animation: m1 1s ease forwards;
+            
         }
 
         .home-page .hero .bottom-layer .menu .menu2 .m2 {
@@ -309,7 +214,7 @@
             font-family: 'Nunito', sans-serif;
             font-size: 20px;
             font-weight: 700;
-            animation: m2 2s ease forwards;
+            
         }
 
         .home-page .hero .bottom-layer .menu .menu2 .m3 {
@@ -326,7 +231,7 @@
             font-family: 'Nunito', sans-serif;
             font-size: 20px;
             font-weight: 700;
-            animation: m3 3s ease forwards;
+            
         }
 
         .home-page .hero .bottom-layer .menu .menu2 .m4 {
@@ -343,7 +248,7 @@
             font-family: 'Nunito', sans-serif;
             font-size: 20px;
             font-weight: 700;
-            animation: m4 4s ease forwards;
+            
         }
 
         .home-page .hero .upper-layer {
@@ -369,5 +274,5 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            animation: img 6s ease forwards;
+            animation: rubberBand 2s ease forwards;
         }
