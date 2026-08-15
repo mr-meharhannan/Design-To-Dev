@@ -1,305 +1,381 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <!--
+  <body>
+    <!--
     Main site wrapper.
     This section keeps the whole portfolio layout centered and grouped into vertical sections.
     All page content sits inside this container.
   -->
-  <section class="home-page">
-    <!--
+    <section class="home-page">
+      <!--
       Top navigation/header bar.
       Contains the availability badge, navigation links, and the primary CTA button.
     -->
-    <section class="header">
-      <!--
+      <section class="header">
+        <!--
         Availability badge at the top-left.
         This small pill communicates that the designer is open to new work.
       -->
-      <div class="header-c1">
-        <i class="fa-solid fa-circle"></i>
-        <span>Availiable for new projects</span>
-      </div>
+        <div class="header-c1">
+          <i class="fa-solid fa-circle"></i>
+          <span>Availiable for new projects</span>
+        </div>
 
-      <!--
+        <!--
         Main navigation menu.
         Each heading acts like a section label, with a small counter next to it.
       -->
-      <div class="header-menu">
-        <h1>Work</h1>
-        <p>[40]</p>
-        <h1>Service</h1>
-        <p>[4]</p>
-        <h1>Experience</h1>
-        <p>[9y+]</p>
-        <h1>Contact</h1>
-      </div>
-      <!--
+        <div class="header-menu">
+          <h1>Work</h1>
+          <p>[40]</p>
+          <h1>Service</h1>
+          <p>[4]</p>
+          <h1>Experience</h1>
+          <p>[9y+]</p>
+          <h1>Contact</h1>
+        </div>
+        <!--
         Primary CTA button on the right side of the header.
         This is the main action for contacting the designer.
       -->
-      <div class="lets-talk">
-        <span>Let's Talk</span>
-        <i class="fa-solid fa-square-up-right"></i>
-      </div>
-    </section>
+        <div class="lets-talk">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-square-up-right"></i>
+        </div>
+      </section>
 
-    <!--
+      <!--
       Hero section.
       This is the first big visual area with the main name, short bio, and profile image.
     -->
-    <section class="hero">
-      <div class="bottom-layer">
-        <!--
+      <section class="hero">
+        <div class="bottom-layer">
+          <!--
           Large hero headline.
           The two text blocks are stacked visually to create the oversized name effect.
         -->
-        <div class="text">
-          <h1 class="text1">MEHAR</h1>
-          <h1 class="text2">HANNAN</h1>
-        </div>
-        <div class="menu">
-          <!--
+          <div class="text">
+            <h1 class="text1">MEHAR</h1>
+            <h1 class="text2">HANNAN</h1>
+          </div>
+          <div class="menu">
+            <!--
             Left column of the hero section.
             This contains the job title, short description, and collaboration button.
           -->
-          <div class="menu1">
-            <h1>Ui/Ux Designer</h1>
-            <p>
-              Design digital products that are clear. <br />usable and
-              conversion focused
-            </p>
-            <div class="collaborate">
-              Let's Collaborate
+            <div class="menu1">
+              <h1>Ui/Ux Designer</h1>
+              <p>
+                Design digital products that are clear. <br />usable and
+                conversion focused
+              </p>
+              <div class="collaborate">
+                Let's Collaborate
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+            <!--
+            Right column of the hero section.
+            These items are social/profile tags or platform links.
+          -->
+            <div class="menu2">
+              <div class="m1">
+                <i class="fa-solid fa-pen-nib"></i>
+                Dribble
+              </div>
+              <div class="m2">
+                <i class="fa-solid fa-paintbrush"></i>
+                Behance
+              </div>
+              <div class="m3">
+                <i class="fa-brands fa-linkedin"></i>
+                Linkedin
+              </div>
+              <div class="m4">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
+        Floating image layer.
+        This overlay sits above the text to create the layered hero composition.
+      -->
+        <div class="upper-layer">
+          <div class="img-wrapper">
+            <img src="assets\img.png" alt="hannan" />
+          </div>
+        </div>
+      </section>
+
+      <!--
+      Portfolio section heading.
+      This block adds the large faded background word and the visible caption below it.
+    -->
+      <div class="portfolio">
+        <span class="portfoliotext">Portfolio</span>
+        <h2 class="selected-work">/Selected Work</h2>
+      </div>
+      <!--
+      Projects/work showcase section.
+      Includes filter buttons and the portfolio cards grid.
+    -->
+      <section class="work">
+        <section class="selectecWork">
+          <!--
+          Top filter row for work categories.
+          This lets the user switch between all work, real projects, and exploration items.
+        -->
+          <div class="filters">
+            <div class="c1">
+              <span class="f1"> All </span>
+              <span class="f2"> Real Projects </span>
+              <span class="f3"> Exploration </span>
+            </div>
+            <div class="c2">
+              <span class="h1"> View All Work </span>
               <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
           <!--
-            Right column of the hero section.
-            These items are social/profile tags or platform links.
-          -->
-          <div class="menu2">
-            <div class="m1">
-              <i class="fa-solid fa-pen-nib"></i>
-              Dribble
-            </div>
-            <div class="m2">
-              <i class="fa-solid fa-paintbrush"></i>
-              Behance
-            </div>
-            <div class="m3">
-              <i class="fa-brands fa-linkedin"></i>
-              Linkedin
-            </div>
-            <div class="m4">
-              <i class="fa-brands fa-instagram"></i>
-              Instagram
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--
-        Floating image layer.
-        This overlay sits above the text to create the layered hero composition.
-      -->
-      <div class="upper-layer">
-        <div class="img-wrapper">
-          <img src="assets\img.png" alt="hannan" />
-        </div>
-      </div>
-    </section>
-
-    <!--
-      Portfolio section heading.
-      This block adds the large faded background word and the visible caption below it.
-    -->
-    <div class="portfolio">
-      <span class="portfoliotext">Portfolio</span>
-      <h2 class="selected-work">/Selected Work</h2>
-    </div>
-    <!--
-      Projects/work showcase section.
-      Includes filter buttons and the portfolio cards grid.
-    -->
-    <section class="work">
-      <section class="selectecWork">
-        <!--
-          Top filter row for work categories.
-          This lets the user switch between all work, real projects, and exploration items.
-        -->
-        <div class="filters">
-          <div class="c1">
-            <span class="f1"> All </span>
-            <span class="f2"> Real Projects </span>
-            <span class="f3"> Exploration </span>
-          </div>
-          <div class="c2">
-            <span class="h1"> View All Work </span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-        </div>
-        <!--
           Grid containing all project cards.
           Each card shows a preview image, title, and small metadata tags.
         -->
-        <div class="projects">
-          <div class="project">
-            <img src="assets/a (1).jpg" alt="html-image" />
-            <span class="product-title">
-              Bloomcare-Mental Health App <br />
-              Landing Page
-            </span>
-            <div class="Properties">
-              <span class="ptxt"> Landing Page </span>
-              <span class="p2"> Kumpin Studio </span>
+          <div class="projects">
+            <div class="project">
+              <img src="assets/a (1).jpg" alt="html-image" />
+              <span class="product-title">
+                Bloomcare-Mental Health App <br />
+                Landing Page
+              </span>
+              <div class="Properties">
+                <span class="ptxt"> Landing Page </span>
+                <span class="p2"> Kumpin Studio </span>
+              </div>
+            </div>
+            <div class="project">
+              <img src="assets/a (2).jpg" alt="html-image" />
+              <span class="product-title">
+                FragWater - luxury fragrance <br />
+                Landing Page
+              </span>
+              <div class="Properties">
+                <span class="ptxt"> Landing Page </span>
+                <span class="p2"> Kumpin Studio </span>
+              </div>
+            </div>
+            <div class="project">
+              <img src="assets/a (3).jpg" alt="html-image" />
+              <span class="product-title">
+                Bloomcare-Mental Health App <br />
+                Landing Page
+              </span>
+              <div class="Properties">
+                <span class="ptxt"> Landing Page </span>
+                <span class="p2"> Kumpin Studio </span>
+              </div>
+            </div>
+            <div class="project">
+              <img src="assets/a (4).jpg" alt="html-image" />
+              <span class="product-title">
+                FragWater - luxury fragrance <br />
+                Landing Page
+              </span>
+              <div class="Properties">
+                <span class="ptxt"> Landing Page </span>
+                <span class="p2"> Kumpin Studio </span>
+              </div>
             </div>
           </div>
-          <div class="project">
-            <img src="assets/a (2).jpg" alt="html-image" />
-            <span class="product-title">
-              FragWater - luxury fragrance <br />
-              Landing Page
-            </span>
-            <div class="Properties">
-              <span class="ptxt"> Landing Page </span>
-              <span class="p2"> Kumpin Studio </span>
+        </section>
+      </section>
+      <!--
+      Services heading block.
+      This has the large faded word background and the visible section label.
+    -->
+      <div class="service-section">
+        <span class="service-hide">Service</span>
+        <h2 class="service-visible">/Service</h2>
+      </div>
+
+      <!--
+      Service offerings list.
+      Each row acts like a card with a title, description, and hover animation.
+    -->
+      <section class="service">
+        <div class="service-content">
+          <!--
+          Individual service item.
+          Hovering over this card reveals the preview image and switch icons.
+        -->
+          <div class="service">
+            <img src="assets/a (1).jpg" alt="" class="service-image" />
+
+            <div class="content">
+              <h1>UIUX DESIGN</h1>
+              <p>
+                Designing clear and scalable interfaces for <br />dashboards,
+                mobile apps, and websites.
+              </p>
+            </div>
+            <div class="spacer"></div>
+            <div class="service-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="service-close">
+              <i class="fa-solid fa-x"></i>
             </div>
           </div>
-          <div class="project">
-            <img src="assets/a (3).jpg" alt="html-image" />
-            <span class="product-title">
-              Bloomcare-Mental Health App <br />
-              Landing Page
-            </span>
-            <div class="Properties">
-              <span class="ptxt"> Landing Page </span>
-              <span class="p2"> Kumpin Studio </span>
+          <div class="service">
+            <img src="assets/a (2).jpg" alt="" class="service-image" />
+
+            <div class="content">
+              <h1>WEB Design & Dev</h1>
+              <p>
+                Designing clear and scalable interfaces for <br />dashboards,
+                mobile apps, and websites.
+              </p>
+            </div>
+            <div class="spacer"></div>
+            <div class="service-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="service-close">
+              <i class="fa-solid fa-x"></i>
             </div>
           </div>
-          <div class="project">
-            <img src="assets/a (4).jpg" alt="html-image" />
-            <span class="product-title">
-              FragWater - luxury fragrance <br />
-              Landing Page
-            </span>
-            <div class="Properties">
-              <span class="ptxt"> Landing Page </span>
-              <span class="p2"> Kumpin Studio </span>
+          <div class="service">
+            <img src="assets/a (3).jpg" alt="" class="service-image" />
+
+            <div class="content">
+              <h1>Branding</h1>
+              <p>
+                Designing clear and scalable interfaces for <br />dashboards,
+                mobile apps, and websites.
+              </p>
+            </div>
+            <div class="spacer"></div>
+            <div class="service-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="service-close">
+              <i class="fa-solid fa-x"></i>
+            </div>
+          </div>
+          <div class="service">
+            <img src="assets/a (4).jpg" alt="" class="service-image" />
+
+            <div class="content">
+              <h1>Motion & Animation</h1>
+              <p>
+                Designing clear and scalable interfaces for <br />dashboards,
+                mobile apps, and websites.
+              </p>
+            </div>
+            <div class="spacer"></div>
+            <div class="service-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="service-close">
+              <i class="fa-solid fa-x"></i>
             </div>
           </div>
         </div>
       </section>
+      <section class="ex-section">
+        <div class="experience-section">
+          <span class="exp-hide">EXPERIENCE</span>
+          <h2 class="exp-visible">/EXPERIENCE</h2>
+        </div>
+        <div class="ex-duration">
+          <p>9+ years of experience</p>
+        </div>
+        <div class="experience">
+          <div class="content">
+            <h2>Kumpin Studio</h2>
+            <p>UI&UX product Designer</p>
+          </div>
+          <div class="spacer"></div>
+          <div class="duration">
+            <p>August 2026 - Present</p>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="content">
+            <h2>Mikan Team</h2>
+            <p>Creative Director</p>
+          </div>
+          <div class="spacer"></div>
+          <div class="duration">
+            <p>August 2026 - Present</p>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="content">
+            <h2>Microsoft</h2>
+            <p>Interaction Design</p>
+          </div>
+          <div class="spacer"></div>
+          <div class="duration">
+            <p>August 2026 - Present</p>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="content">
+            <h2>Facebook</h2>
+            <p>Visual Designer</p>
+          </div>
+          <div class="spacer"></div>
+          <div class="duration">
+            <p>August 2026 - Present</p>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="content">
+            <h2>Apple</h2>
+            <p>Experience Designer</p>
+          </div>
+          <div class="spacer"></div>
+          <div class="duration">
+            <p>August 2026 - Present</p>
+          </div>
+        </div>
+        <img
+          src="assets/a (1).jpg"
+          alt="Floating Image"
+          class="cursor-follow"
+        />
+      </section>
     </section>
-    <!--
-      Services heading block.
-      This has the large faded word background and the visible section label.
-    -->
-    <div class="service-section">
-      <span class="service-hide">Service</span>
-      <h2 class="service-visible">/Service</h2>
-    </div>
-
-    <!--
-      Service offerings list.
-      Each row acts like a card with a title, description, and hover animation.
-    -->
-    <section class="service">
-      <div class="service-content">
-        <!--
-          Individual service item.
-          Hovering over this card reveals the preview image and switch icons.
-        -->
-        <div class="service">
-          <img src="assets/a (1).jpg" alt="" class="service-image" />
-
-          <div class="content">
-            <h1>UIUX DESIGN</h1>
-            <p>
-              Designing clear and scalable interfaces for <br />dashboards,
-              mobile apps, and websites.
-            </p>
-          </div>
-          <div class="spacer"></div>
-          <div class="service-arrow">
-          <i class="fa-solid fa-arrow-right"></i>
-          </div>
-          <div class="service-close">
-            <i class="fa-solid fa-x"></i>
-          </div>
-        </div>
-        <div class="service">
-          <img src="assets/a (2).jpg" alt="" class="service-image" />
-
-          <div class="content">
-            <h1>WEB Design & Dev</h1>
-            <p>
-              Designing clear and scalable interfaces for <br />dashboards,
-              mobile apps, and websites.
-            </p>
-          </div>
-          <div class="spacer"></div>
-          <div class="service-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-          <div class="service-close">
-            <i class="fa-solid fa-x"></i>
-          </div>
-        </div>
-        <div class="service">
-          <img src="assets/a (3).jpg" alt="" class="service-image" />
-
-          <div class="content">
-            <h1>Branding</h1>
-            <p>
-              Designing clear and scalable interfaces for <br />dashboards,
-              mobile apps, and websites.
-            </p>
-          </div>
-          <div class="spacer"></div>
-          <div class="service-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-          <div class="service-close">
-            <i class="fa-solid fa-x"></i>
-          </div>
-        </div>
-        <div class="service">
-          <img src="assets/a (4).jpg" alt="" class="service-image" />
-
-          <div class="content">
-            <h1>Motion & Animation</h1>
-            <p>
-              Designing clear and scalable interfaces for <br />dashboards,
-              mobile apps, and websites.
-            </p>
-          </div>
-          <div class="spacer"></div>
-          <div class="service-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-          <div class="service-close">
-            <i class="fa-solid fa-x"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-  </section>
-  <script src="script.js"></script>
-</body>
-
+    <footer>
+      <p>&copy; 2026 Mehar Hannan. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -4,9 +4,9 @@
   =========================================
 */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /*
@@ -17,14 +17,14 @@
   =========================================
 */
 .home-page {
-  overflow-y: auto;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffff;
-  width: min(1400px, calc(100% - 40px));
-  min-height: 100vh;
-  margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    width: min(1400px, calc(100% - 40px));
+    min-height: 100vh;
+    margin: 0 auto;
 }
 
 /*
@@ -36,13 +36,13 @@
   =========================================
 */
 .home-page .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 50px;
-  margin-top: 20px;
-  animation: slideInDown 0.8s ease forwards;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    margin-top: 20px;
+    animation: slideInDown 0.8s ease forwards;
 }
 
 /*
@@ -51,18 +51,18 @@
   Layout: horizontal row with icon + text, kept visually separate from the nav.
 */
 .home-page .header .header-c1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid #f1eded;
-  padding: 5px 10px;
-  border-radius: 50px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #f1eded;
+    padding: 5px 10px;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .home-page .header .header-c1 i {
-  color: #6bb111;
+    color: #6bb111;
 }
 
 /*
@@ -71,25 +71,25 @@
   Layout: simple flex row so the brand messaging sits neatly beside the CTA area.
 */
 .home-page .header .header-menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
 .home-page .header .header-menu h1 {
-  font-size: 16px;
-  font-weight: 800;
-  color: #000;
-  font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #000;
+    font-family: "Nunito", sans-serif;
 }
 
 .home-page .header .header-menu p {
-  font-size: 14px;
-  font-weight: 400;
-  color: #5c5a5a;
-  font-family: "Nunito", sans-serif;
-  margin-right: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #5c5a5a;
+    font-family: "Nunito", sans-serif;
+    margin-right: 30px;
 }
 
 /*
@@ -98,23 +98,23 @@
   Layout: inline row with icon + label, using a rounded shape for a modern CTA style.
 */
 .home-page .header .lets-talk {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 18px;
-  border-radius: 50px;
-  background-color: #000;
-  font-size: 14px;
-  color: #fff;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  line-height: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    background-color: #000;
+    font-size: 14px;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    line-height: 1;
 }
 
 .home-page .header .lets-talk i {
-  font-size: 20px;
-  line-height: 1;
+    font-size: 20px;
+    line-height: 1;
 }
 
 /*
@@ -126,13 +126,13 @@
   =========================================
 */
 .home-page .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  align-items: center;
-  padding: 0px 50px;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    padding: 0px 50px;
+    margin-top: 20px;
 }
 
 /*
@@ -141,11 +141,11 @@
   Layout: vertical stack with the text in the middle and the menu below it.
 */
 .home-page .hero .bottom-layer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 /*
@@ -154,28 +154,28 @@
   Layout: row with the two text blocks aligned and centered, creating the large hero typography.
 */
 .home-page .hero .bottom-layer .text {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .home-page .hero .bottom-layer .text .text1 {
-  font-size: 155px;
-  font-weight: 800;
-  font-family: "Londrina Outline", cursive;
-  letter-spacing: 15%;
-  animation: slideInDown 1s ease forwards;
+    font-size: 155px;
+    font-weight: 800;
+    font-family: "Londrina Outline", cursive;
+    letter-spacing: 15%;
+    animation: slideInDown 1s ease forwards;
 }
 
 .home-page .hero .bottom-layer .text .text2 {
-  font-size: 155px;
-  font-weight: 800;
-  font-family: "Nunito", sans-serif;
-  letter-spacing: -10px;
-  animation: slideInDown 1s ease forwards;
-  animation-delay: 0.1s;
+    font-size: 155px;
+    font-weight: 800;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: -10px;
+    animation: slideInDown 1s ease forwards;
+    animation-delay: 0.1s;
 }
 
 /*
@@ -184,11 +184,11 @@
   Layout: left column for headline/CTA, right column for compact chips and labels.
 */
 .home-page .hero .bottom-layer .menu {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 /*
@@ -197,48 +197,48 @@
   Layout: vertical stack so the text flows naturally from title to description to button.
 */
 .home-page .hero .bottom-layer .menu .menu1 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 50px;
 }
 
 .home-page .hero .bottom-layer .menu .menu1 h1 {
-  font-size: 40px;
-  font-weight: 800;
-  font-family: "Nunito", sans-serif;
-  animation: slideInUp 0.8s ease forwards;
-  animation-delay: 0.2s;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: "Nunito", sans-serif;
+    animation: slideInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
 }
 
 .home-page .hero .bottom-layer .menu .menu1 p {
-  font-size: 22px;
-  font-weight: 500;
-  font-family: "Nunito", sans-serif;
-  color: #5c5a5a;
-  animation: slideInUp 0.8s ease forwards;
-  animation-delay: 0.4s;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Nunito", sans-serif;
+    color: #5c5a5a;
+    animation: slideInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
 }
 
 .home-page .hero .bottom-layer .menu .menu1 .collaborate {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: fit-content;
-  gap: 10px;
-  padding: 10px 18px;
-  border-radius: 50px;
-  background-color: #000;
-  font-size: 14px;
-  color: #fff;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  animation: slideInUp 0.8s ease forwards;
-  animation-delay: 0.6s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    gap: 10px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    background-color: #000;
+    font-size: 14px;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    animation: slideInUp 0.8s ease forwards;
+    animation-delay: 0.6s;
 }
 
 .home-page .hero .bottom-layer .menu .menu1 .collaborate i {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 /*
@@ -247,82 +247,82 @@
   Layout: stacked column with each item appearing as a rounded chip.
 */
 .home-page .hero .bottom-layer .menu .menu2 {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 50px;
 }
 
 .home-page .hero .bottom-layer .menu .menu2 .m1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  font-family: "Nunito", sans-serif;
-  border: 1px solid #0a0a0a;
-  padding: 5px 10px;
-  line-height: 1;
-  box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
-  border-radius: 50px;
-  font-family: "Nunito", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  animation: fadeInUp 0.7s ease forwards;
-  animation-delay: 0.3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: "Nunito", sans-serif;
+    border: 1px solid #0a0a0a;
+    padding: 5px 10px;
+    line-height: 1;
+    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
+    border-radius: 50px;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    animation: fadeInUp 0.7s ease forwards;
+    animation-delay: 0.3s;
 }
 
 .home-page .hero .bottom-layer .menu .menu2 .m2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  font-family: "Nunito", sans-serif;
-  border: 1px solid #0a0a0a;
-  padding: 5px 10px;
-  line-height: 1;
-  box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
-  border-radius: 50px;
-  font-family: "Nunito", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  animation: fadeInUp 0.7s ease forwards;
-  animation-delay: 0.5s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: "Nunito", sans-serif;
+    border: 1px solid #0a0a0a;
+    padding: 5px 10px;
+    line-height: 1;
+    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
+    border-radius: 50px;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    animation: fadeInUp 0.7s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .home-page .hero .bottom-layer .menu .menu2 .m3 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  font-family: "Nunito", sans-serif;
-  border: 1px solid #0a0a0a;
-  padding: 5px 10px;
-  line-height: 1;
-  box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
-  border-radius: 50px;
-  font-family: "Nunito", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  animation: fadeInUp 0.7s ease forwards;
-  animation-delay: 0.7s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: "Nunito", sans-serif;
+    border: 1px solid #0a0a0a;
+    padding: 5px 10px;
+    line-height: 1;
+    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
+    border-radius: 50px;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    animation: fadeInUp 0.7s ease forwards;
+    animation-delay: 0.7s;
 }
 
 .home-page .hero .bottom-layer .menu .menu2 .m4 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  font-family: "Nunito", sans-serif;
-  border: 1px solid #0a0a0a;
-  padding: 5px 10px;
-  line-height: 1;
-  box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
-  border-radius: 50px;
-  font-family: "Nunito", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  animation: fadeInUp 0.7s ease forwards;
-  animation-delay: 0.9s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: "Nunito", sans-serif;
+    border: 1px solid #0a0a0a;
+    padding: 5px 10px;
+    line-height: 1;
+    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
+    border-radius: 50px;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    animation: fadeInUp 0.7s ease forwards;
+    animation-delay: 0.9s;
 }
 
 /*
@@ -331,30 +331,30 @@
   Layout: this layer sits on top of the background so the image appears layered between the headline sections.
 */
 .home-page .hero .upper-layer {
-  position: absolute;
-  z-index: 1;
-  top: 95px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 420px;
-  max-width: 45vw;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 420px;
+    max-width: 45vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-page .hero .upper-layer .img-wrapper {
-  width: 400px;
-  height: 400px;
+    width: 400px;
+    height: 400px;
 }
 
 .home-page .hero .upper-layer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: fadeInUp 1.2s ease forwards;
-  animation-delay: 0.2s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 0.2s;
 }
 
 /*
@@ -365,30 +365,30 @@
   =========================================
 */
 .home-page .portfolio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 50px;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    margin-top: 20px;
 }
 
 .home-page .portfolio .portfoliotext {
-  position: absolute;
-  z-index: 0;
-  font-size: 250px;
-  color: #00000008;
-  font-weight: bolder;
-  font-family: "Nunito", sans-serif;
-  letter-spacing: 10px;
+    position: absolute;
+    z-index: 0;
+    font-size: 250px;
+    color: #00000008;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 10px;
 }
 
 .home-page .portfolio .selected-work {
-  font-size: 60px;
-  color: #000;
-  font-weight: bolder;
-  padding-top: 130px;
-  font-family: "Nunito", sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: bolder;
+    padding-top: 130px;
+    font-family: "Nunito", sans-serif;
 }
 
 /*
@@ -399,67 +399,67 @@
   =========================================
 */
 .home-page .work {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 50px;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+    margin-top: 20px;
 }
 
 .home-page .work .selectecWork {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .home-page .work .selectecWork .filters {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 50px;
 }
 
 .home-page .work .selectecWork .filters .c1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
 
 .home-page .work .selectecWork .filters .c1 .f1 {
-  font-size: 20px;
-  color: #000;
-  font-weight: bolder;
-  font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    color: #000;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
 }
 
 .home-page .work .selectecWork .filters .c1 .f2 {
-  font-size: 20px;
-  color: #000;
-  font-weight: bolder;
-  font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    color: #000;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
 }
 
 .home-page .work .selectecWork .filters .c1 .f3 {
-  font-size: 20px;
-  color: #000;
-  font-weight: bolder;
-  font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    color: #000;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
 }
 
 .home-page .work .selectecWork .filters .c2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  border: 1px solid #00000042;
-  padding: 5px 10px;
-  border-radius: 50px;
-  font-family: "Nunito", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #00000042;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-family: "Nunito", sans-serif;
 }
 
 /*
@@ -468,12 +468,12 @@
   Layout: cards stretch across the available width with consistent spacing and padding.
 */
 .home-page .work .selectecWork .projects {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  width: 100%;
-  padding: 0px 80px;
-  margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 0px 80px;
+    margin: 20px;
 }
 
 /*
@@ -482,64 +482,64 @@
   Layout: vertical column from image at top to metadata at bottom, with a clean white card and soft shadow.
 */
 .home-page .work .selectecWork .projects .project {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  gap: 10px;
-  border: 1px solid #0000000c;
-  border-radius: 4px;
-  background-color: #ffffff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  height: 500px;
-  width: 95%;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+    border: 1px solid #0000000c;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    width: 95%;
+    margin-top: 20px;
 }
 
 .home-page .work .selectecWork .projects .project img {
-  width: 100%;
-  height: 350px;
-  object-fit: fill;
+    width: 100%;
+    height: 350px;
+    object-fit: fill;
 }
 
 .home-page .work .selectecWork .projects .project .product-title {
-  font-size: 20px;
-  color: #000;
-  font-weight: bolder;
-  font-family: "Nunito", sans-serif;
-  padding: 10px 20px;
+    font-size: 20px;
+    color: #000;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
+    padding: 10px 20px;
 }
 
 .home-page .work .selectecWork .projects .project .Properties {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  gap: 15px;
-  align-items: center;
-  font-family: "Nunito", sans-serif;
-  padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 15px;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+    padding: 10px 20px;
 }
 
 .home-page .work .selectecWork .projects .project .Properties .ptxt {
-  font-size: 16px;
-  color: #000;
-  font-weight: 500;
-  font-family: "Nunito", sans-serif;
-  border: 1px solid #00000042;
-  border-radius: 50px;
-  padding: 5px 10px;
-  box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    font-family: "Nunito", sans-serif;
+    border: 1px solid #00000042;
+    border-radius: 50px;
+    padding: 5px 10px;
+    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
 }
 
 .home-page .work .selectecWork .projects .project .Properties .p2 {
-  font-size: 16px;
-  color: #000;
-  font-weight: 500;
-  font-family: "Nunito", sans-serif;
-  border: 1px solid #00000042;
-  border-radius: 50px;
-  padding: 5px 10px;
-  box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    font-family: "Nunito", sans-serif;
+    border: 1px solid #00000042;
+    border-radius: 50px;
+    padding: 5px 10px;
+    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
 }
 
 /*
@@ -550,31 +550,32 @@
   =========================================
 */
 .home-page .service-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  padding: 0px 50px;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0px 50px;
+    margin-top: 20px;
 }
 
 .home-page .service-section .service-hide {
-  position: absolute;
-  z-index: 0;
-  font-size: 250px;
-  color: #00000008;
-  font-weight: bolder;
-  font-family: "Nunito", sans-serif;
-  letter-spacing: 10px;
+    position: absolute;
+    z-index: 0;
+    font-size: 250px;
+    color: #00000008;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 10px;
 }
 
 .home-page .service-section .service-visible {
-  font-size: 60px;
-  color: #000;
-  font-weight: bolder;
-  padding-top: 130px;
-  font-family: "Nunito", sans-serif;
+    font-size: 60px;
+    color: #000;
+    font-weight: bolder;
+    padding-top: 130px;
+    font-family: "Nunito", sans-serif;
 }
+
 /*
   =========================================
   Individual service card layout
@@ -583,20 +584,20 @@
   =========================================
 */
 .home-page .service {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  padding: 50px 0px;
-  margin-top: 20px;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 50px 0px;
+    margin-top: 20px;
+    gap: 20px;
 }
 
 .home-page .service .service-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /*
@@ -605,80 +606,200 @@
   Layout: text on the left, spacing on the right, and hover effects that reveal an image and switch the icon state.
 */
 .home-page .service .service-content .service {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 200px;
-  gap: 10px;
-  background-color: #ffffff;
-  padding: 20px 30px;
-  border-radius: 4px;
-  border-bottom: 1px solid #0000008c;
-  cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 4px;
+    border-bottom: 1px solid #0000008c;
+    cursor: pointer;
 }
 
 .home-page .service .service-content .service:hover {
-  background-color: #000000b7;
-  color: #fff;
+    background-color: #000000b7;
+    color: #fff;
 }
 
 .home-page .service .service-content .service img {
-  position: absolute;
-  opacity: 0;
-  overflow: hidden;
-  left: 50%;
-  transform: translateY(-60px);
-  rotate: 10deg;
-  width: 200px;
-  height: 140px;
-  object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    left: 50%;
+    transform: translateY(-60px);
+    rotate: 10deg;
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
 }
 
 .home-page .service .service-content .service:hover img {
-  opacity: 1;
-  transform: translateY(-60px) rotate(10deg);
-  transition: all 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateY(-60px) rotate(10deg);
+    transition: all 0.5s ease-in-out;
 }
 
 .home-page .service .service-content .service .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
 }
 
 .home-page .service .service-content .service .content h1 {
-  font-size: 60px;
-  font-weight: bolder;
-  font-family: "Nunito", sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
 }
 
 .home-page .service .service-content .service .content p {
-  font-size: 20px;
-  font-weight: 500;
-  font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Nunito", sans-serif;
 }
 
 .home-page .service .service-content .service .spacer {
-  margin-left: auto;
+    margin-left: auto;
 }
 
-.home-page .service .service-content .service .service-arrow{
-  font-size: 40px;
+.home-page .service .service-content .service .service-arrow {
+    font-size: 40px;
 }
 
 .home-page .service .service-content .service .service-close {
-  font-size: 40px;
-  opacity: 0;
+    font-size: 40px;
+    opacity: 0;
 }
 
 .home-page .service .service-content .service:hover .service-close {
-  opacity: 1;
+    opacity: 1;
 }
 
 .home-page .service .service-content .service:hover .service-arrow {
-  opacity: 0;
+    opacity: 0;
+}
+
+.home-page .ex-section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    margin: 50px 0px;
+    color: #fff;
+    background-color: #000000e1;
+}
+
+.home-page .ex-section .experience-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0px 50px;
+    margin-top: 20px;
+}
+
+.home-page .ex-section .experience-section .exp-hide {
+    position: absolute;
+    z-index: 0;
+    font-size: 150px;
+    color: #f8f5f508;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 10px;
+}
+
+.home-page .ex-section .experience-section .exp-visible {
+    font-size: 60px;
+    color: #fdfdfd;
+    font-weight: bolder;
+    padding-top: 130px;
+    font-family: "Nunito", sans-serif;
+}
+
+.home-page .ex-section .ex-duration {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.home-page .ex-section .ex-duration p {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Nunito", sans-serif;
+    text-align: right;
+    margin: 0;
+    transform: translateY(-45px);
+}
+
+.home-page .ex-section .experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0px 50px;
+    margin: 20px 0px;
+    border-bottom: #faf9f92f 1px solid;
+}
+
+.home-page .ex-section .experience .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+
+.home-page .ex-section .experience .content h2 {
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
+}
+
+.home-page .ex-section .experience .content p {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Nunito", sans-serif;
+    padding-bottom: 20px;
+}
+
+.home-page .ex-section .experience .duration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-page .ex-section .experience .duration p {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Nunito", sans-serif;
+    text-align: right;
+    transform: translateY(25px);
+    color: #f1eded;
+}
+
+.home-page .ex-section .cursor-follow {
+    position: fixed;
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(20%, 20%) rotate(10deg);
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000be;
+    color: #fff;
+    font-size: 28px;
+    font-family: "Nunito", sans-serif;
 }
