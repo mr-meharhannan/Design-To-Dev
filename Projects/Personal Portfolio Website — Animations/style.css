@@ -1,7 +1,16 @@
 /*
-  =========================================
-  Global reset and base page styling
-  =========================================
+  ═════════════════════════════════════════════════════════════════
+  GLOBAL RESET AND BASE PAGE STYLING
+  ═════════════════════════════════════════════════════════════════
+  
+  Yeh section mein tamma elements ko reset kia ja raha hai
+  aur base styles define ki ja rahi hain
+*/
+
+/* 
+  UNIVERSAL SELECTOR - Tamma elements par apply hota hai
+  margin/padding ko 0 set kiya hai takey koi extra space na rahe
+  box-sizing: border-box = padding aur border ko width mein include karo
 */
 * {
     margin: 0;
@@ -9,93 +18,264 @@
     box-sizing: border-box;
 }
 
-/*
-  =========================================
-  Main page shell
-  - Keeps the portfolio centered on the page
-  - Creates a vertical column layout for all sections
-  =========================================
+/* 
+  HTML ELEMENT - Pura page ka behavior
+  scroll-behavior: smooth = scroll karte waqt smooth animation hota hai
+  (acha user experience k liye)
 */
-.home-page {
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffff;
-    width: min(1400px, calc(100% - 40px));
-    min-height: 100vh;
-    margin: 0 auto;
+html {
+    scroll-behavior: smooth;
 }
 
 /*
-  =========================================
-  Header section
-  - Brand/logo area on the left
-  - Menu text in the center
-  - CTA button on the right
-  =========================================
+  BODY - Main page background aur text styling
+  Font = Nunito (professional designer look k liye)
+  Color = Black text
+  Background = Subtle gradient effect (bohot light radial gradients)
+  Line-height = 1.5 (comfortable padha-likha k liye)
+*/
+body {
+    font-family: "Nunito", sans-serif;
+    color: #000;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(0, 0, 0, 0.03), transparent 35%),
+        radial-gradient(circle at 90% 20%, rgba(0, 0, 0, 0.02), transparent 28%),
+        #fff;
+    line-height: 1.5;
+}
+
+/*
+  LINKS - Tamma <a> tags
+  Color inherit kare - parent element ka same color
+  Text decoration hata do (underline hatane k liye)
+*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*
+  LINK FOCUS STATE - Keyboard users k liye (accessibility)
+  Tab press karte waqt link par outline dikhta hai
+  3px solid outline dark blue color ka with spacing
+*/
+a:focus-visible {
+    outline: 3px solid #111;
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+/*
+  IMAGES - Tamma images
+  max-width: 100% = images apni container se bara nahi honge
+  display: block = images ke neeche koi extra space nahi hoga
+*/
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*
+  ═════════════════════════════════════════════════════════════════
+  MAIN PAGE SHELL (.home-page)
+  ═════════════════════════════════════════════════════════════════
+  
+  Yeh main container hai jo pura website ko wrap karta hai
+  - Center mein rakhta hai
+  - Vertical layout mein sab sections ko arrange karta hai
+  - Max width set hai takey bohot chora na ho
+*/
+.home-page {
+    overflow-y: auto;           /* Vertical scrolling allow karo */
+    overflow-x: hidden;         /* Horizontal scrolling nahi */
+    display: flex;              /* Flex layout */
+    flex-direction: column;     /* Items vertically arranged hon */
+    background-color: #ffff;    /* White background */
+    width: min(1400px, calc(100% - 40px));  /* Max 1400px ya screen width - 40px */
+    min-height: 100vh;          /* Minimum pure screen height cover karo */
+    margin: 0 auto;             /* Center mein rakho */
+}
+
+/*
+  ═════════════════════════════════════════════════════════════════
+  REUSABLE MOTION SYSTEM (Scroll Reveal Animations)
+  ═════════════════════════════════════════════════════════════════
+  
+  Yeh section animations define karta hai jo scroll karte waqt chalti hain
+  - reveal-up = upar se slide in karte hue aata hai
+  - reveal-fade = fade in hota hai (transparency se dikhta hai)
+  - reveal-scale = chhota se bara hota hai (zoom in effect)
+  
+  will-change = browser ko batata hai k ye element animate hoga
+  animation-timing-function = smooth curve (professional feel)
+*/
+
+.reveal-up,
+.reveal-fade,
+.reveal-scale {
+    opacity: 1;                                             /* Fully visible */
+    will-change: transform, opacity;                        /* Browser optimization */
+    animation-duration: 0.8s;                               /* 0.8 seconds duration */
+    animation-fill-mode: both;                              /* Both forward aur backward states */
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);  /* Smooth curve */
+    animation-delay: var(--reveal-delay, 0ms);              /* JavaScript se set hota hai */
+}
+
+/* Upar se slide in animation */
+.reveal-up {
+    animation-name: revealUpIn;
+}
+
+/* Fade in animation */
+.reveal-fade {
+    animation-name: revealFadeIn;
+}
+
+/* Zoom in animation */
+.reveal-scale {
+    animation-name: revealScaleIn;
+}
+
+/*
+  ANIMATION KEYFRAMES - Animation ke steps
+  revealUpIn = shuru mein transparent + neeche, end mein solid + sahi position
+*/
+@keyframes revealUpIn {
+    0% {
+        opacity: 0;                    /* Transparent */
+        transform: translateY(34px);   /* 34px neeche */
+    }
+
+    100% {
+        opacity: 1;                    /* Fully visible */
+        transform: translateY(0);      /* Sahi position par */
+    }
+}
+
+@keyframes revealFadeIn {
+    /* Fade in animation - shuru mein thora transparent aur slide */
+    0% {
+        opacity: 0;                    /* Invisible */
+        transform: translateY(14px);   /* Thora neeche */
+    }
+
+    100% {
+        opacity: 1;                    /* Fully visible */
+        transform: translateY(0);      /* Sahi jagah */
+    }
+}
+
+@keyframes revealScaleIn {
+    /* Scale in animation - shuru mein chhota aur transparent */
+    0% {
+        opacity: 0;                          /* Invisible */
+        transform: translateY(24px) scale(0.96);  /* Chhota - 96% size */
+    }
+
+    100% {
+        opacity: 1;                    /* Fully visible */
+        transform: translateY(0) scale(1);  /* Normal size */
+    }
+}
+
+@keyframes floatingGentle {
+    /* Gentle floating effect - profile image k liye */
+    0% {
+        transform: translateY(0px);    /* Normal position */
+    }
+
+    50% {
+        transform: translateY(-8px);   /* Upar ko 8px */
+    }
+
+    100% {
+        transform: translateY(0px);    /* Wapas normal */
+    }
+}
+
+/*
+  ═════════════════════════════════════════════════════════════════
+  HEADER SECTION STYLING
+  ═════════════════════════════════════════════════════════════════
+  
+  Top navigation bar jo teen parts mein divide hai:
+  - Left: Availability status (green circle)
+  - Center: Navigation links
+  - Right: "Let's Talk" call-to-action button
+*/
+
+/* 
+  Header container - Top navigation bar
+  space-between = left mein first item, center mein second, right mein third
 */
 .home-page .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 50px;
+    justify-content: space-between;       /* Items ko spread karo */
+    align-items: center;                  /* Vertically center karo */
+    padding: 0px 50px;                    /* Sides par space */
     margin-top: 20px;
-    animation: slideInDown 0.8s ease forwards;
+    animation: slideInDown 0.8s ease forwards;  /* Top se slide down */
 }
 
 /*
-  Brand chip in the header
-  What this does: wraps the small logo/marker area into a rounded pill.
-  Layout: horizontal row with icon + text, kept visually separate from the nav.
+  Availability status - Green circle wala pill
+  - Green circle icon + "Available for new projects" text
+  - Rounded pill shape
+  - Subtle shadow
 */
 .home-page .header .header-c1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
-    border: 1px solid #f1eded;
+    gap: 10px;                          /* Icon aur text ke beech space */
+    border: 1px solid #f1eded;          /* Light border */
     padding: 5px 10px;
-    border-radius: 50px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;                /* Completely rounded (pill shape) */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
 }
 
+/* Green circle ka color */
 .home-page .header .header-c1 i {
-    color: #6bb111;
+    color: #6bb111;                     /* Green color - available status */
 }
 
 /*
-  Header navigation group
-  What this does: arranges the text-based menu items in a clean inline row.
-  Layout: simple flex row so the brand messaging sits neatly beside the CTA area.
+  Navigation menu - Links container
+  flex-wrap: wrap = mobile par next line par chale jaye
 */
 .home-page .header .header-menu {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;                    /* Mobile responsive */
     gap: 10px;
 }
 
-.home-page .header .header-menu h1 {
+/* Individual navigation links */
+.home-page .header .header-menu a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 800;                  /* Bold */
     color: #000;
     font-family: "Nunito", sans-serif;
 }
 
-.home-page .header .header-menu p {
+/* Link ke numbers/counts (jaise [40], [4]) */
+.home-page .header .header-menu a span {
     font-size: 14px;
-    font-weight: 400;
-    color: #5c5a5a;
+    font-weight: 400;                  /* Normal weight */
+    color: #5c5a5a;                    /* Gray color */
     font-family: "Nunito", sans-serif;
-    margin-right: 30px;
 }
 
 /*
-  Primary call-to-action button in the header
-  What this does: makes the "Let's Talk" area look like a pill-shaped black button.
-  Layout: inline row with icon + label, using a rounded shape for a modern CTA style.
+  "Let's Talk" CTA button
+  - Black pill-shaped button
+  - Icon + text
+  - Hover effect
 */
 .home-page .header .lets-talk {
     display: flex;
@@ -103,42 +283,54 @@
     align-items: center;
     gap: 10px;
     padding: 10px 18px;
-    border-radius: 50px;
-    background-color: #000;
+    border-radius: 50px;               /* Pill shape */
+    background-color: #000;            /* Black button */
     font-size: 14px;
-    color: #fff;
+    color: #fff;                       /* White text */
     font-family: "Nunito", sans-serif;
-    font-weight: 700;
+    font-weight: 700;                  /* Bold */
     line-height: 1;
+    transition: opacity 0.2s ease;     /* Smooth opacity change */
 }
 
+/* Button hover state - thora transparent */
+.home-page .header .lets-talk:hover {
+    opacity: 0.9;                      /* 10% transparent */
+}
+
+/* Button icon */
 .home-page .header .lets-talk i {
     font-size: 20px;
     line-height: 1;
 }
 
 /*
-  =========================================
-  Hero section
-  - Large headline text centered in the page
-  - Left intro text and action buttons
-  - Floating profile image layered above the text
-  =========================================
+  ═════════════════════════════════════════════════════════════════
+  HERO SECTION STYLING
+  ═════════════════════════════════════════════════════════════════
+  
+  Main landing area jo:
+  - Bada headline (MEHAR HANNAN) dikhaata hai
+  - Profile image background mein
+  - Left side par intro text
+  - Right side par social links
+  - Min height = 100vh (pure screen ko cover kare)
 */
+
+/* Hero section container */
 .home-page .hero {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    align-items: center;
+    justify-content: center;          /* Vertically center */
+    min-height: 100vh;                /* Pure screen height */
+    align-items: center;              /* Horizontally center */
     padding: 0px 50px;
     margin-top: 20px;
 }
 
 /*
-  Hero content stack
-  What this does: groups the headline, intro text, and floating feature list into one centered column.
-  Layout: vertical stack with the text in the middle and the menu below it.
+  Hero bottom layer - Text aur menu content
+  yeh profile image ke neeche rehta hai (visual hierarchy)
 */
 .home-page .hero .bottom-layer {
     display: flex;
@@ -149,9 +341,10 @@
 }
 
 /*
-  Big headline row
-  What this does: places the oversized name/title text side-by-side.
-  Layout: row with the two text blocks aligned and centered, creating the large hero typography.
+  Bada headline (MEHAR HANNAN)
+  - Two parts: MEHAR aur HANNAN
+  - Side by side arranged
+  - 155px font size
 */
 .home-page .hero .bottom-layer .text {
     display: flex;
@@ -161,49 +354,50 @@
     gap: 20px;
 }
 
+/* "MEHAR" - Londrina font (stylish) */
 .home-page .hero .bottom-layer .text .text1 {
     font-size: 155px;
     font-weight: 800;
-    font-family: "Londrina Outline", cursive;
-    letter-spacing: 15%;
-    animation: slideInDown 1s ease forwards;
+    font-family: "Londrina Outline", cursive;  /* Special font */
+    letter-spacing: 15%;               /* Words ke beech space */
+    animation: slideInDown 1s ease forwards;   /* Top se slide down */
 }
 
+/* "HANNAN" - Nunito font (clean) */
 .home-page .hero .bottom-layer .text .text2 {
     font-size: 155px;
     font-weight: 800;
     font-family: "Nunito", sans-serif;
-    letter-spacing: -10px;
+    letter-spacing: -10px;             /* Words closer */
     animation: slideInDown 1s ease forwards;
-    animation-delay: 0.1s;
+    animation-delay: 0.1s;             /* Thora baad mein animate */
 }
 
 /*
-  Hero lower section with intro copy and skill pills
-  What this does: splits the lower hero area into two sides: left text and right info pills.
-  Layout: left column for headline/CTA, right column for compact chips and labels.
+  Menu section - Introduction text + Social links
+  Two columns: left (intro) aur right (social)
 */
 .home-page .hero .bottom-layer .menu {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-between;    /* Left aur right spread */
     margin-top: 20px;
 }
 
 /*
-  Left-side intro content
-  What this does: controls the headline, supporting text, and CTA in the hero area.
-  Layout: vertical stack so the text flows naturally from title to description to button.
+  Left side intro content - "UI/UX Designer" heading + description + CTA
+  padding-left = sirf left side par space
 */
 .home-page .hero .bottom-layer .menu .menu1 {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px;                        /* Elements ke beech space */
     padding-left: 50px;
 }
 
-.home-page .hero .bottom-layer .menu .menu1 h1 {
+/* "UI/UX Designer" heading */
+.home-page .hero .bottom-layer .menu .menu1 h2 {
     font-size: 40px;
     font-weight: 800;
     font-family: "Nunito", sans-serif;
@@ -211,23 +405,25 @@
     animation-delay: 0.2s;
 }
 
+/* Description paragraph */
 .home-page .hero .bottom-layer .menu .menu1 p {
     font-size: 22px;
     font-weight: 500;
     font-family: "Nunito", sans-serif;
-    color: #5c5a5a;
+    color: #5c5a5a;                  /* Gray text */
     animation: slideInUp 0.8s ease forwards;
     animation-delay: 0.4s;
 }
 
+/* "Let's Collaborate" button */
 .home-page .hero .bottom-layer .menu .menu1 .collaborate {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: fit-content;
+    width: fit-content;               /* Size ko content ke hisaab se */
     gap: 10px;
     padding: 10px 18px;
-    border-radius: 50px;
+    border-radius: 50px;              /* Pill shape */
     background-color: #000;
     font-size: 14px;
     color: #fff;
@@ -235,6 +431,11 @@
     font-weight: 700;
     animation: slideInUp 0.8s ease forwards;
     animation-delay: 0.6s;
+    transition: opacity 0.2s ease;
+}
+
+.home-page .hero .bottom-layer .menu .menu1 .collaborate:hover {
+    opacity: 0.9;
 }
 
 .home-page .hero .bottom-layer .menu .menu1 .collaborate i {
@@ -242,127 +443,103 @@
 }
 
 /*
-  Right-side information pills
-  What this does: creates a vertical list of short labels or tags near the hero content.
-  Layout: stacked column with each item appearing as a rounded chip.
+  Right side social links menu
+  Vertical stack of 4 social platform buttons (Dribble, Behance, LinkedIn, Instagram)
+  padding-right = sirf right side par space
 */
 .home-page .hero .bottom-layer .menu .menu2 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px;                        /* Buttons ke beech space */
     padding-right: 50px;
 }
 
-.home-page .hero .bottom-layer .menu .menu2 .m1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    font-family: "Nunito", sans-serif;
-    border: 1px solid #0a0a0a;
-    padding: 5px 10px;
-    line-height: 1;
-    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
-    border-radius: 50px;
-    font-family: "Nunito", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    animation: fadeInUp 0.7s ease forwards;
-    animation-delay: 0.3s;
-}
-
-.home-page .hero .bottom-layer .menu .menu2 .m2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    font-family: "Nunito", sans-serif;
-    border: 1px solid #0a0a0a;
-    padding: 5px 10px;
-    line-height: 1;
-    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
-    border-radius: 50px;
-    font-family: "Nunito", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    animation: fadeInUp 0.7s ease forwards;
-    animation-delay: 0.5s;
-}
-
-.home-page .hero .bottom-layer .menu .menu2 .m3 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    font-family: "Nunito", sans-serif;
-    border: 1px solid #0a0a0a;
-    padding: 5px 10px;
-    line-height: 1;
-    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
-    border-radius: 50px;
-    font-family: "Nunito", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    animation: fadeInUp 0.7s ease forwards;
-    animation-delay: 0.7s;
-}
-
+/* Individual social button - Dribble, Behance, LinkedIn, Instagram */
+.home-page .hero .bottom-layer .menu .menu2 .m1,
+.home-page .hero .bottom-layer .menu .menu2 .m2,
+.home-page .hero .bottom-layer .menu .menu2 .m3,
 .home-page .hero .bottom-layer .menu .menu2 .m4 {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
     font-family: "Nunito", sans-serif;
-    border: 1px solid #0a0a0a;
+    border: 1px solid #0a0a0a;        /* Dark border */
     padding: 5px 10px;
     line-height: 1;
-    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
-    border-radius: 50px;
-    font-family: "Nunito", sans-serif;
+    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);  /* Inner shadow */
+    border-radius: 50px;              /* Pill shape */
     font-size: 20px;
     font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+/* Individual animations for each social button */
+.home-page .hero .bottom-layer .menu .menu2 .m1 {
+    animation: fadeInUp 0.7s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.home-page .hero .bottom-layer .menu .menu2 .m2 {
+    animation: fadeInUp 0.7s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.home-page .hero .bottom-layer .menu .menu2 .m3 {
+    animation: fadeInUp 0.7s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.home-page .hero .bottom-layer .menu .menu2 .m4 {
     animation: fadeInUp 0.7s ease forwards;
     animation-delay: 0.9s;
 }
 
 /*
-  Floating portrait image layer
-  What this does: centers the profile picture above the hero text using absolute positioning.
-  Layout: this layer sits on top of the background so the image appears layered between the headline sections.
+  Floating profile image
+  - Positioned upar hero text ke
+  - Gentle floating animation
+  - Width limit takey bohot chora na ho
 */
 .home-page .hero .upper-layer {
-    position: absolute;
-    z-index: 1;
-    top: 95px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute;               /* Fixed position relative to parent */
+    z-index: 1;                       /* Top ke neeche display */
+    top: 95px;                        /* 95px neeche */
+    left: 50%;                        /* Center horizontally */
+    transform: translateX(-50%);      /* Exact center mein */
     width: 420px;
-    max-width: 45vw;
+    max-width: 45vw;                  /* Mobile ke liye responsive */
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Image wrapper */
 .home-page .hero .upper-layer .img-wrapper {
     width: 400px;
     height: 400px;
+    animation: floatingGentle 5.8s ease-in-out infinite;  /* Gentle up-down motion */
 }
 
+/* Actual image */
 .home-page .hero .upper-layer img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;                /* Image ko cover mein show karo */
     animation: fadeInUp 1.2s ease forwards;
     animation-delay: 0.2s;
 }
 
 /*
-  =========================================
-  Portfolio heading block
-  - Large faded background text for section identity
-  - Main visible title under it
-  =========================================
+  ═════════════════════════════════════════════════════════════════
+  PORTFOLIO HEADING BLOCK
+  ═════════════════════════════════════════════════════════════════
+  
+  Section heading jo "Portfolio" aur "/Selected Work" dikhaata hai
+  - Faded background text (portfolio) 
+  - Bold visible heading (/Selected Work)
+  - Center mein aligned
 */
 .home-page .portfolio {
     display: flex;
@@ -371,6 +548,8 @@
     align-items: center;
     padding: 0px 50px;
     margin-top: 20px;
+    overflow: hidden;
+    position: relative;
 }
 
 .home-page .portfolio .portfoliotext {
@@ -494,6 +673,12 @@
     height: 500px;
     width: 95%;
     margin-top: 20px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.home-page .work .selectecWork .projects .project:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.15);
 }
 
 .home-page .work .selectecWork .projects .project img {
@@ -556,6 +741,8 @@
     align-items: start;
     padding: 0px 50px;
     margin-top: 20px;
+    overflow: hidden;
+    position: relative;
 }
 
 .home-page .service-section .service-hide {
@@ -651,7 +838,7 @@
     gap: 10px;
 }
 
-.home-page .service .service-content .service .content h1 {
+.home-page .service .service-content .service .content h3 {
     font-size: 60px;
     font-weight: bolder;
     font-family: "Nunito", sans-serif;
@@ -684,6 +871,14 @@
     opacity: 0;
 }
 
+/*
+  =========================================
+  Experience section
+  - Dark background to contrast with the previous light sections
+  - Timeline-style content with job roles and dates
+  - Summary text aligned to the right for a cleaner layout
+  =========================================
+*/
 .home-page .ex-section {
     display: flex;
     flex-direction: column;
@@ -693,6 +888,11 @@
     background-color: #000000e1;
 }
 
+/*
+  Experience heading block.
+  What this does: creates the large faded word background and the visible section title.
+  Layout: column arrangement so the text sits with enough spacing above the job list.
+*/
 .home-page .ex-section .experience-section {
     display: flex;
     flex-direction: column;
@@ -700,6 +900,8 @@
     align-items: start;
     padding: 0px 50px;
     margin-top: 20px;
+    overflow: hidden;
+    position: relative;
 }
 
 .home-page .ex-section .experience-section .exp-hide {
@@ -720,6 +922,11 @@
     font-family: "Nunito", sans-serif;
 }
 
+/*
+  Experience summary statement.
+  What this does: pushes the years-of-experience text to the far right of the section.
+  Layout: full width container with end-aligned content so it reads like a highlight statistic.
+*/
 .home-page .ex-section .ex-duration {
     display: flex;
     flex-direction: row;
@@ -737,6 +944,11 @@
     transform: translateY(-45px);
 }
 
+/*
+  Individual experience row.
+  What this does: arranges each job item in a horizontal timeline layout.
+  Layout: left side company info, right side date text, with a subtle divider line between entries.
+*/
 .home-page .ex-section .experience {
     display: flex;
     flex-direction: row;
@@ -755,7 +967,7 @@
     gap: 10px;
 }
 
-.home-page .ex-section .experience .content h2 {
+.home-page .ex-section .experience .content h3 {
     font-size: 20px;
     font-weight: bolder;
     font-family: "Nunito", sans-serif;
@@ -783,6 +995,11 @@
     color: #f1eded;
 }
 
+/*
+  Floating image effect.
+  What this does: displays a small preview image that follows the cursor inside the experience section.
+  Layout: fixed-position image with pointer-events disabled so it only behaves like a visual hover effect.
+*/
 .home-page .ex-section .cursor-follow {
     position: fixed;
     width: 120px;
@@ -795,6 +1012,140 @@
     z-index: 999;
 }
 
+/*
+  =========================================
+  Final call-to-action section
+  - Centered heading and contact area
+  - Social links displayed as clickable pills
+  =========================================
+*/
+.letswork {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    margin: 50px 0px;
+    gap: 20px;
+    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
+}
+
+/*
+  CTA badge for the final contact section.
+  What this does: creates a small pill label above the main heading to signal availability.
+  Layout: centered horizontal row with an icon and short message.
+*/
+.letswork .cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border: #000 1px solid;
+    border-radius: 50px;
+}
+
+.letswork .cta h1 {
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
+}
+
+.letswork h2 {
+    font-size: 80px;
+    font-weight: bolder;
+    font-family: "Nunito", sans-serif;
+}
+
+.letswork p {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+}
+
+.letswork .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: #000 1px solid;
+    font-family: "Nunito", sans-serif;
+    box-shadow: inset 0 20px 30px rgba(241, 3, 3, 0.267);
+    transition: opacity 0.2s ease;
+}
+
+.letswork .contact:hover {
+    opacity: 0.9;
+}
+
+.letswork .contact i {
+    font-size: 20px;
+}
+
+/*
+  Social links row.
+  What this does: arranges the contact/profile buttons in a centered row.
+  Layout: horizontal flex layout with consistent spacing between each network link.
+*/
+.letswork .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/*
+  Individual social button.
+  What this does: gives each profile/contact item a rounded pill design with icon and label.
+  Layout: horizontal layout with icon + text, and hover styling for a dark mode effect.
+*/
+.letswork .social .link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    border: #000 1px solid;
+    border-radius: 50px;
+    box-shadow: inset 0 20px 30px rgba(105, 104, 104, 0.1);
+    margin-top: 80px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.letswork .social .link:hover {
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.16);
+} 
+
+.letswork .social .link .social-img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    background-color: #f1eded;
+    border-radius: 50%;
+}
+
+.letswork .social .link i {
+    font-size: 30px;
+}
+
+.letswork .social .link p {
+    font-size: 28px;
+    font-weight: 1200;
+    font-family: "Nunito", sans-serif;
+}
+
+
 footer {
     text-align: center;
     padding: 20px;
@@ -802,4 +1153,358 @@ footer {
     color: #fff;
     font-size: 28px;
     font-family: "Nunito", sans-serif;
+}
+
+/*
+  =========================================
+  Accessibility and responsive layout rules
+  =========================================
+*/
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home-page .hero .bottom-layer .text .text1,
+    .home-page .hero .bottom-layer .text .text2 {
+        font-size: 120px;
+    }
+
+    .home-page .hero .bottom-layer .menu .menu1 h2 {
+        font-size: 34px;
+    }
+
+    .home-page .hero .bottom-layer .menu .menu1 p {
+        font-size: 20px;
+    }
+
+    .home-page .work .selectecWork .projects {
+        padding: 0 30px;
+    }
+
+    .letswork h2 {
+        font-size: 64px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .home-page {
+        width: min(1400px, calc(100% - 24px));
+    }
+
+    .home-page .header,
+    .home-page .hero,
+    .home-page .portfolio,
+    .home-page .service-section {
+        padding: 0 20px;
+    }
+
+    .home-page .header {
+        position: sticky;
+        top: 8px;
+        z-index: 20;
+        margin-inline: 10px;
+        padding: 12px 14px;
+        border-radius: 16px;
+        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .home-page .work {
+        padding: 40px 20px;
+    }
+
+    .home-page .hero {
+        min-height: auto;
+        padding-top: 30px;
+    }
+
+    .home-page .hero .bottom-layer .text {
+        gap: 10px;
+    }
+
+    .home-page .hero .bottom-layer .text .text1,
+    .home-page .hero .bottom-layer .text .text2 {
+        font-size: 88px;
+        letter-spacing: 0;
+    }
+
+    .home-page .hero .bottom-layer .menu {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .home-page .hero .bottom-layer .menu .menu1,
+    .home-page .hero .bottom-layer .menu .menu2 {
+        padding: 0;
+    }
+
+    .home-page .hero .upper-layer {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .home-page .hero .upper-layer .img-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+
+    .home-page .portfolio .portfoliotext,
+    .home-page .service-section .service-hide,
+    .home-page .ex-section .experience-section .exp-hide {
+        font-size: 120px;
+        letter-spacing: 3px;
+    }
+
+    .home-page .portfolio .selected-work,
+    .home-page .service-section .service-visible,
+    .home-page .ex-section .experience-section .exp-visible {
+        font-size: 42px;
+        padding-top: 76px;
+    }
+
+    .home-page .work .selectecWork .filters {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .home-page .work .selectecWork .projects {
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin: 0;
+    }
+
+    .home-page .work .selectecWork .projects .project {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        border-radius: 14px;
+    }
+
+    .home-page .work .selectecWork .projects .project img {
+        height: 280px;
+    }
+
+    .home-page .service .service-content .service {
+        height: auto;
+        min-height: 140px;
+        padding: 20px;
+        border-radius: 14px;
+        border: 1px solid #00000017;
+        margin-bottom: 8px;
+    }
+
+    .home-page .service .service-content .service .content h3 {
+        font-size: 38px;
+    }
+
+    .home-page .service .service-content .service .content p {
+        font-size: 18px;
+    }
+
+    .home-page .ex-section {
+        padding: 40px 20px;
+    }
+
+    .home-page .ex-section .experience-section,
+    .home-page .ex-section .experience {
+        padding: 0;
+    }
+
+    .letswork {
+        padding: 70px 20px;
+        border-radius: 22px;
+    }
+
+    .letswork h2 {
+        font-size: 50px;
+    }
+
+    .letswork p {
+        font-size: 20px;
+    }
+
+    .letswork .social {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .letswork .social .link {
+        margin-top: 16px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .home-page .header {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 10px;
+        top: 6px;
+        border-radius: 14px;
+    }
+
+    .home-page .header .header-menu {
+        justify-content: center;
+    }
+
+    .home-page .hero .bottom-layer .text {
+        flex-direction: column;
+        line-height: 0.95;
+    }
+
+    .home-page .hero .bottom-layer .text .text1,
+    .home-page .hero .bottom-layer .text .text2 {
+        font-size: 64px;
+    }
+
+    .home-page .hero .bottom-layer .menu .menu1 .collaborate,
+    .home-page .header .lets-talk,
+    .letswork .contact {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .home-page .hero .upper-layer .img-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+
+    .home-page .hero .bottom-layer .menu .menu1 h2 {
+        font-size: 28px;
+    }
+
+    .home-page .hero .bottom-layer .menu .menu1 p {
+        font-size: 18px;
+    }
+
+    .home-page .hero .bottom-layer .menu .menu2 {
+        width: 100%;
+    }
+
+    .home-page .hero .bottom-layer .menu .menu2 .m1,
+    .home-page .hero .bottom-layer .menu .menu2 .m2,
+    .home-page .hero .bottom-layer .menu .menu2 .m3,
+    .home-page .hero .bottom-layer .menu .menu2 .m4 {
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .home-page .portfolio .portfoliotext,
+    .home-page .service-section .service-hide,
+    .home-page .ex-section .experience-section .exp-hide {
+        font-size: 72px;
+    }
+
+    .home-page .portfolio .selected-work,
+    .home-page .service-section .service-visible,
+    .home-page .ex-section .experience-section .exp-visible {
+        font-size: 30px;
+        padding-top: 42px;
+    }
+
+    .home-page .work .selectecWork .filters .c1 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .home-page .work .selectecWork .filters .c1 .f1,
+    .home-page .work .selectecWork .filters .c1 .f2,
+    .home-page .work .selectecWork .filters .c1 .f3 {
+        font-size: 16px;
+    }
+
+    .home-page .work .selectecWork .projects .project img {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .home-page .service {
+        padding: 30px 0;
+    }
+
+    .home-page .service .service-content .service {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .home-page .service .service-content .service .content h3 {
+        font-size: 28px;
+    }
+
+    .home-page .service .service-content .service .content p {
+        font-size: 16px;
+    }
+
+    .home-page .service .service-content .service .service-arrow,
+    .home-page .service .service-content .service .service-close {
+        font-size: 28px;
+    }
+
+    .home-page .service .service-content .service img {
+        width: 140px;
+        height: 100px;
+        left: auto;
+        right: 20px;
+    }
+
+    .home-page .ex-section .ex-duration p {
+        transform: none;
+        margin-top: 12px;
+    }
+
+    .home-page .ex-section .experience {
+        flex-direction: column;
+        gap: 6px;
+        margin: 14px 0;
+        padding-bottom: 8px;
+    }
+
+    .home-page .ex-section .experience .duration p {
+        transform: none;
+        text-align: left;
+    }
+
+    .letswork h2 {
+        font-size: 36px;
+    }
+
+    .letswork p {
+        font-size: 18px;
+    }
+
+    .letswork .social .link {
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
+        border-radius: 14px;
+    }
+
+    .letswork .social .link p {
+        font-size: 22px;
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 14px;
+    }
 }
