@@ -1,0 +1,7 @@
+:root {
+    --page-background-color: linear-gradient(180deg, #c3cfe2bd 30%, #f5f7fa 70%);
+    --page-width: 100%;
+    --page-height: 100vh;
+    --display: flex;
+    --flex-direction: column;
+}
