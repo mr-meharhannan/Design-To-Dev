@@ -1,3 +1,58 @@
 #c-nav {
-    color: black;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    display: var(--nav-display);
+    flex-direction: var(--nav-flex-direction);
+    justify-content: var(--nav-justify-content);
+    align-items: var(--nav-align-items);
+    padding: var(--nav-padding);
+    gap: var(--nav-gap);
+    height: var(--nav-height);
+    width: var(--nav-width);
+    background-color: var(--nav-bg-color);
 }
+
+#nav-item {
+    display: var(--nav-item-display);
+    flex-direction: var(--nav-item-flex-direction);
+    align-items: var(--nav-item-align-items);
+    gap: var(--nav-item-gap);
+    background-color: var(--nav-bg-color);
+}
+
+#nav-item i {
+    color: var(--nav-icon-color);
+}
+
+#nav-item:hover i {
+    color: var(--nav-icon-hover-color);
+}
+
+#nav-item span {
+    color: var(--nav-text-color);
+}
+
+#nav-item:hover span {
+    color: var(--nav-text-hover-color);
+}
+
+#addtask {
+    background-color: var(--nav-addtask-bg-color);
+}
+
+#addtask-button {
+    background-color: var(--nav-addtask-button-bg-color);
+    color: var(--nav-addtask-button-icon-color);
+}
+
+#addtask-button:hover {
+    background-color: var(--nav-addtask-button-hover-bg-color);
+}
+
+#addtask-button i {
+    color: var(--nav-addtask-button-icon-color);
+}
+
