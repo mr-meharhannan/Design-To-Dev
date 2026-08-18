@@ -25,10 +25,12 @@
 
 #nav-item i {
     color: var(--nav-icon-color);
+    font-size: var(--icon-size);
 }
 
 #nav-item:hover i {
     color: var(--nav-icon-hover-color);
+    font-size: var(--icon-size);
 }
 
 #nav-item span {
@@ -39,13 +41,29 @@
     color: var(--nav-text-hover-color);
 }
 
-#addtask {
+#nav-addtask {
     background-color: var(--nav-addtask-bg-color);
+    box-shadow: var(--nav-addtask-box-shadow);
+    width: var(--nav-addtask-width);
+    height: var(--nav-addtask-height);
+    border-radius: var(--nav-addtask-border-radius);
+    display: var(--nav-addtask-display);
+    flex-direction: var(--nav-addtask-flex-direction);
+    align-items: var(--nav-addtask-align-items);
+    justify-content: var(--nav-addtask-justify-content);
+    transform: var(--nav-addtask-transform);
 }
 
 #addtask-button {
+    display: var(--nav-addtask-button-display);
+    flex-direction: var(--nav-addtask-button-flex-direction);
+    align-items: var(--nav-addtask-button-align-items);
+    justify-content: var(--nav-addtask-button-justify-content);
     background-color: var(--nav-addtask-button-bg-color);
     color: var(--nav-addtask-button-icon-color);
+    width: var(--nav-addtask-button-width);
+    height: var(--nav-addtask-button-height);
+    border-radius: var(--nav-addtask-button-border-radius);
 }
 
 #addtask-button:hover {
@@ -54,5 +72,6 @@
 
 #addtask-button i {
     color: var(--nav-addtask-button-icon-color);
+    font-size: var(--icon-size);
 }
 
