@@ -1,6 +1,6 @@
 import { loadCSS, loadHTML } from "../../utils/loader.js";
 
-export class Nav extends HTMLElement {
+export class DashboardHeader extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -8,8 +8,8 @@ export class Nav extends HTMLElement {
 
     async connectedCallback() {
         try {
-            const css = await loadCSS("component/nav/nav.css");
-            const html = await loadHTML("component/nav/nav.html");
+            const css = await loadCSS("component/dashboardheader/c-dashboardheader.css");
+            const html = await loadHTML("component/dashboardheader/c-dashboardheader.html");
             this.shadowRoot.innerHTML = `
                 <style>
                     @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
@@ -19,11 +19,11 @@ export class Nav extends HTMLElement {
                 ${html}
             `;
         } catch (error) {
-            console.error("Error loading nav component:", error);
+            console.error("Error loading dashboardheader component:", error);
         }
     }
 }
 
-if (!customElements.get("c-nav")) {
-    customElements.define("c-nav", Nav);
+if (!customElements.get("c-dashboardheader")) {
+    customElements.define("c-dashboardheader", DashboardHeader);
 }

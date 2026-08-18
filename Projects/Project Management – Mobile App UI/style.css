@@ -1,45 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 :root {
 
-    --nav-display: flex;
-    --nav-flex-direction: row;
-    --nav-justify-content: space-evenly;
-    --nav-align-items: center;
-    --nav-padding: 10px 10px;
-    --nav-gap: 0px;
-    --nav-height: 80px;
-    --nav-width: 100%;
-    --nav-bg-color: #ffffff1a;
-    --nav-item-display: flex;
-    --nav-item-flex-direction: column;
-    --nav-item-align-items: center;
-    --nav-item-gap: 5px;
-    --nav-bg-color: #ffffff1c;
-    --nav-text-color: #000000;
-    --nav-text-hover-color: #ff0000;
-    --nav-icon-color: #03a3ff;
-    --nav-icon-hover-color: #ff1100;
-    --nav-addtask-bg-color: #03a3ff3d;
-    --nav-addtask-box-shadow: 0px 2px 10px #00c8ff;
-    --nav-addtask-transform: translateY(-10px);
-    --nav-addtask-elevation: 5px;
-    --nav-addtask-width: 70px;
-    --nav-addtask-height: 70px;
-    --nav-addtask-border-radius: 50%;
-    --nav-addtask-display: flex;
-    --nav-addtask-flex-direction: column;
-    --nav-addtask-align-items: center;
-    --nav-addtask-justify-content: center;
-    --nav-addtask-button-bg-color: #00013fca;
-    --nav-addtask-button-hover-bg-color: #ff1100;
-    --nav-addtask-button-width: 50px;
-    --nav-addtask-button-height: 50px;
-    --nav-addtask-button-display: flex;
-    --nav-addtask-button-flex-direction: column;
-    --nav-addtask-button-align-items: center;
-    --nav-addtask-button-justify-content: center;
-    --nav-addtask-button-border-radius: 50%;
-    --nav-addtask-button-icon-color: #ffffff;
+    --font-family: 'Nunito', sans-serif;
+    --text-color: #333;
 
+    --icon-button-bg-color: #ffffff;
+    --icon-button-width: 40px;
+    --icon-button-height: 40px;
+    --icon-button-border-radius: 50%;
+    --icon-button-display: flex;
+    --icon-button-flex-direction: column;
+    --icon-button-align-items: center;
+    --icon-button-justify-content: center;
+    --icon-button-hover-bg-color: #97bdce;
 
-    --icon-size: 24px;
+    
 }
