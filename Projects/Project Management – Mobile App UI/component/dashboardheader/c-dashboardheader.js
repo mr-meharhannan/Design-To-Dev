@@ -17,6 +17,7 @@ export class DashboardHeader extends HTMLElement {
                 </style>
                 <style>${css}</style>
                 ${html}
+                
             `;
         } catch (error) {
             console.error("Error loading dashboardheader component:", error);
