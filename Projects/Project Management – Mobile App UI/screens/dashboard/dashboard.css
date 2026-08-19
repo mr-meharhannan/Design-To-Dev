@@ -3,7 +3,7 @@
     font-family: var(--font-family);
     min-height: 100vh;
     padding: 0px 10px;
-    background: linear-gradient(180deg, #f4f8ff 0%, #f7f7fb 100%);
+    background: linear-gradient(180deg, #00a2ff3f 20%, #fdfdfd 100%);
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -13,33 +13,49 @@
   max-width: 150px;
 }
 
-#container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+#dashboard-analytics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    gap: 30px;
 }
 
-#tasks-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+#tasks-analytics {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 4px;
 }
 
-#task-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+#task-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2px;
+    margin: 0;
 }
 
 #task {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
+  margin: 0;
+}
+
+#task i {
+  font-size: 8px;
+  color: var(--text-color);
+}
+#task p {
+  margin: 0;
+  font-size: 12px;
+}
+#task span {
+  font-size: 8px;
+  color: var(--text-color);
 }
