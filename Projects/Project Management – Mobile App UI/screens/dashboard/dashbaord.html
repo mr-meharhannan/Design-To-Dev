@@ -1,5 +1,32 @@
 <div id="dashboard">
-    <c-nav></c-nav>
-    <h1>Dashboard</h1>
-    <p>Welcome to your dashboard!</p>
+    <c-nav screen="dashboard"></c-nav>
+    <c-dashboardheader></c-dashboardheader>
+    <div id="dashboard-analytics">
+        <div id="chart"></div>
+        <div id="tasks-analytics">
+            <div id="task-box" data-status="completed">
+                <div id="task">
+                    <i class="fa-solid fa-circle" style="color: green;"></i>
+                    <p>Project Done</p>
+                </div>
+                <span id="completed-percent">0%</span>
+            </div>
+            <div id="task-box" data-status="active">
+                <div id="task">
+                    <i class="fa-solid fa-circle" style="color: orange;"></i>
+                    <p>In Progress</p>
+                </div>
+                <span id="active-percent">0%</span>
+            </div>
+            <div id="task-box" data-status="backlog">
+                <div id="task">
+                    <i class="fa-solid fa-circle" style="color: red;"></i>
+                    <p>Backlog</p>
+                </div>
+                <span id="backlog-percent">0%</span>
+            </div>
+        </div>
+    </div>
+    <p id="todaytask">Today's Task</p>
+    <c-dashboardcards></c-dashboardcards>
 </div>

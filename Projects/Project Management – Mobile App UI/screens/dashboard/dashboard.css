@@ -2,26 +2,88 @@
     color: var(--text-color);
     font-family: var(--font-family);
     min-height: 100vh;
-    padding: 0 18px 110px;
-    background: linear-gradient(180deg, #f4f8ff 0%, #f7f7fb 100%);
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 clamp(12px, 3vw, 32px) 110px;
+    background: var(--page-background-color);
     box-sizing: border-box;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.dashboard-content {
-    padding-top: 10px;
+#chart {
+  padding: 0;
+  max-width: 150px;
 }
 
-.dashboard-content h1 {
-    margin: 0 0 8px;
-    font-size: 2rem;
-    font-weight: 800;
-    color: #1f2a3d;
+.chart-fallback { display: grid; place-items: center; width: 140px; height: 140px; border: 12px solid #1479e933; border-top-color: #1479e9; border-radius: 50%; color: #202938; text-align: center; }.chart-fallback strong { font-size: 22px; }.chart-fallback span { max-width: 80px; color: #7b8494; font-size: 10px; }
+
+#dashboard-analytics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap: clamp(18px, 6vw, 72px);
+    width: 100%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.dashboard-content p {
+#tasks-analytics {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: min(100%, 340px);
+    min-width: 0;
+    gap: 4px;
+}
+
+#task-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2px;
     margin: 0;
-    color: #5c6472;
-    font-size: 1rem;
-    line-height: 1.6;
 }
+
+#task {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+#task i {
+  font-size: 8px;
+  color: var(--text-color);
+}
+#task p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bolder;
+  white-space: nowrap;
+}
+#task span {
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: bolder;
+  white-space: nowrap;
+}
+
+#todaytask {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: bolder;
+  color: var(--text-color);
+  margin-top: 20px;
+  overflow-wrap: anywhere;
+}
+
+#dashboard-analytics > * { min-width: 0; }
+
+@media (max-width: 480px) { #dashboard-analytics { margin-top: 86px; gap: 16px; } #task p { font-size: 13px; } #task span { font-size: 12px; } #chart { max-width: 125px; } }
+@media (min-width: 768px) { #dashboard-analytics { margin-top: 110px; } }

@@ -1,4 +1,4 @@
-import { loadCSS, loadHTML } from "../../utils/loader.js";
+import { loadCSS, loadHTML } from "../../utils/loader.js?v=6";
 
 export class DashboardHeader extends HTMLElement {
     constructor() {
@@ -17,6 +17,7 @@ export class DashboardHeader extends HTMLElement {
                 </style>
                 <style>${css}</style>
                 ${html}
+                
             `;
         } catch (error) {
             console.error("Error loading dashboardheader component:", error);

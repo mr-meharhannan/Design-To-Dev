@@ -1,0 +1,120 @@
+#dashboardcards {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    overflow-x: auto;
+    margin-bottom: 90px;
+    min-width: 0;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #0ba9f22b;
+    border-radius: 10px;
+    border: 1px solid #0beef2;
+    gap: 15px;
+    max-width: 300px;
+    min-width: min(82vw, 300px);
+
+}   
+
+#card-priority {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f3f3;
+    height: 20px;
+    padding: 5px;
+    border-radius: 25px;
+    width: 100px;
+    white-space: nowrap;
+}
+
+#priority {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    text-align: center;
+}
+
+#task-heading {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bolder;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    overflow-wrap: anywhere;
+}
+
+#task-description {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    overflow-wrap: anywhere;
+}
+
+#profiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f0f3f3;
+}
+
+#profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#progress {
+    /* 1. FORCE THE BROWSER TO REMOVE DEFAULT STYLING */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    margin-top: 60px;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    border: none; /* Removes default border in Firefox */
+    overflow: hidden;
+}
+
+/* 2. STYLE THE TRACK (BACKGROUND) */
+#progress::-webkit-progress-bar {
+    background-color: #00525249;
+    border-radius: 5px;
+}
+
+/* 3. STYLE THE FILLED BAR (Chrome, Safari, Edge) */
+#progress::-webkit-progress-value {
+    background: rgb(0, 189, 252);
+    border-radius: 5px;
+}
+
+/* 4. STYLE THE FILLED BAR (Firefox) */
+#progress::-moz-progress-bar {
+    background: rgb(0, 189, 252);
+}
+
+.card { display: flex; flex: 0 1 280px; min-width: min(78vw, 280px); flex-direction: column; gap: 12px; padding: 18px; background: #0ba9f22b; border: 1px solid #0beef2; border-radius: 12px; }
+.card.completed { opacity: .72; }.card-priority { width: max-content; padding: 5px 9px; border-radius: 999px; background: #f0f3f3; }.priority { margin: 0; color: #202938; font-size: 12px; font-weight: 700; }.task-heading { margin: 0; color: #202938; font-size: 20px; overflow-wrap: anywhere; }.task-description { margin: 0; color: #536174; font-size: 14px; overflow-wrap: anywhere; }.card-footer { display: flex; justify-content: space-between; gap: 8px; color: #536174; font-size: 12px; }.card progress { width: 100%; height: 5px; margin-top: 8px; }.dashboard-empty { padding: 20px; color: #657083; }

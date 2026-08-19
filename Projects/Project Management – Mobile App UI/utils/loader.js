@@ -5,7 +5,7 @@
 /* 🔹 FUNCTION 1: CSS Load Karna */
 export async function loadCSS(filePath) {
     try {
-        const response = await fetch(filePath);
+        const response = await fetch(`${filePath}?v=6`);
         if (!response.ok) {
             throw new Error(`CSS load nahi hui: ${filePath}`);
         }
@@ -19,7 +19,7 @@ export async function loadCSS(filePath) {
 /* 🔹 FUNCTION 2: HTML Load Karna */
 export async function loadHTML(filePath) {
     try {
-        const response = await fetch(filePath);
+        const response = await fetch(`${filePath}?v=6`);
         if (!response.ok) {
             throw new Error(`HTML load nahi hua: ${filePath}`);
         }
