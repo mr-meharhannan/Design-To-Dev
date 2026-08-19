@@ -1,0 +1,51 @@
+<main class="screen" id="mytasks">
+    <c-nav screen="mytasks"></c-nav>
+    <header class="screen-header tasks-header">
+        <div>
+            <p class="eyebrow">Workspace</p>
+            <h1>My Tasks</h1>
+        </div>
+        <button class="icon-button" id="open-task-form" type="button" aria-label="Create a task" title="Create a task">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+    </header>
+    <section class="task-toolbar" aria-label="Task tools">
+        <label class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="task-search" type="search" placeholder="Search tasks" aria-label="Search tasks">
+        </label>
+        <div class="filter-tabs" role="tablist" aria-label="Task filters">
+            <button class="filter-tab active" type="button" data-filter="all" role="tab">All</button>
+            <button class="filter-tab" type="button" data-filter="active" role="tab">Active</button>
+            <button class="filter-tab" type="button" data-filter="completed" role="tab">Done</button>
+        </div>
+    </section>
+    <section class="task-summary" aria-live="polite">
+        <strong id="task-count">0 tasks</strong>
+        <span id="task-progress">0 completed</span>
+    </section>
+    <section class="task-list" id="task-list" aria-label="Task list"></section>
+    <p class="empty-state" id="empty-state" hidden>No tasks match your search.</p>
+
+    <dialog class="task-dialog" id="task-dialog" aria-labelledby="task-dialog-title">
+        <form id="task-form" method="dialog">
+            <div class="dialog-heading">
+                <div>
+                    <p class="eyebrow">Workspace</p>
+                    <h2 id="task-dialog-title">Create task</h2>
+                </div>
+                <button class="icon-button muted" id="close-task-form" type="button" aria-label="Close task form" title="Close task form">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <input id="task-id" type="hidden">
+            <label>Title<input id="task-title" required maxlength="80" placeholder="e.g. Review project brief"></label>
+            <label>Description<textarea id="task-description" maxlength="240" rows="3" placeholder="Add a short description"></textarea></label>
+            <div class="form-row">
+                <label>Priority<select id="task-priority"><option value="High">High</option><option value="Medium" selected>Medium</option><option value="Low">Low</option></select></label>
+                <label>Due date<input id="task-due-date" type="date"></label>
+            </div>
+            <button class="primary-button" type="submit">Save task</button>
+        </form>
+    </section>
+</main>

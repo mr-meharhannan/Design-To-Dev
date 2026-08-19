@@ -1,4 +1,4 @@
-import { loadCSS, loadHTML } from "../../utils/loader.js";
+import { loadCSS, loadHTML } from "../../utils/loader.js?v=6";
 
 export class DashboardHeader extends HTMLElement {
     constructor() {

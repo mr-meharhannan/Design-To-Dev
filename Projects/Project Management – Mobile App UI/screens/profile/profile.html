@@ -1,0 +1,29 @@
+<main class="screen" id="profile">
+    <c-nav screen="profile"></c-nav>
+    <header class="screen-header profile-header">
+        <div>
+            <p class="eyebrow">Account</p>
+            <h1>Profile</h1>
+        </div>
+        <button class="icon-button" id="edit-profile" type="button" aria-label="Edit profile" title="Edit profile"><i class="fa-solid fa-pen"></i></button>
+    </header>
+    <section class="profile-card" aria-label="Profile summary">
+        <div class="avatar" id="profile-avatar">H</div>
+        <div><h2 id="profile-name">Hannan</h2><p id="profile-role">Product Designer</p><small id="profile-email">hannan@example.com</small></div>
+    </section>
+    <section class="settings-list" aria-label="Settings">
+        <button class="setting-row" id="notification-setting" type="button"><span><i class="fa-regular fa-bell"></i> Notifications</span><strong id="notification-state">On</strong></button>
+        <button class="setting-row" id="theme-setting" type="button"><span><i class="fa-solid fa-palette"></i> Theme</span><strong id="theme-state">Light</strong></button>
+        <div class="setting-row static"><span><i class="fa-solid fa-shield-halved"></i> Account status</span><strong class="status-good">Active</strong></div>
+    </section>
+
+    <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-dialog-title">
+        <form id="profile-form" method="dialog">
+            <div class="dialog-heading"><h2 id="profile-dialog-title">Edit profile</h2><button class="icon-button muted" id="close-profile-form" type="button" aria-label="Close profile form"><i class="fa-solid fa-xmark"></i></button></div>
+            <label>Name<input id="profile-name-input" required maxlength="60"></label>
+            <label>Role<input id="profile-role-input" required maxlength="60"></label>
+            <label>Email<input id="profile-email-input" type="email" required maxlength="100"></label>
+            <button class="primary-button" type="submit">Save profile</button>
+        </form>
+    </dialog>
+</main>

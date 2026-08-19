@@ -9,16 +9,13 @@
 
     --font-family: 'Nunito', sans-serif;
     --text-color: #333;
+    --page-background-color: linear-gradient(180deg, #00a2ff1f 0.2%, #fdfdfd 100%);
 
-    --icon-button-bg-color: #ffffff;
-    --icon-button-width: 40px;
-    --icon-button-height: 40px;
-    --icon-button-border-radius: 50%;
-    --icon-button-display: flex;
-    --icon-button-flex-direction: column;
-    --icon-button-align-items: center;
-    --icon-button-justify-content: center;
-    --icon-button-hover-bg-color: #97bdce;
 
-    
 }
+
+html { min-width: 320px; background: #f6f8fb; }
+body { min-width: 320px; min-height: 100vh; overflow-x: hidden; }
+button, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+.install-button { position: fixed; top: max(14px, env(safe-area-inset-top)); right: 14px; z-index: 2000; border: 0; border-radius: 10px; padding: 10px 14px; color: white; background: #1479e9; box-shadow: 0 8px 20px #1479e933; font: 700 13px var(--font-family); cursor: pointer; }
+@media (min-width: 768px) { body { display: grid; place-items: start center; } body > c-dashboard, body > c-mytasks, body > c-schedule, body > c-profile { display: block; width: min(100%, 1120px); min-width: 0; } }
