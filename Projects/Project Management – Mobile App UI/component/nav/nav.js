@@ -1,4 +1,4 @@
-import { loadCSS, loadHTML } from "../../utils/loader.js";
+import { loadCSS, loadHTML } from "../../utils/loader.js?v=6";
 
 export class Nav extends HTMLElement {
     constructor() {
@@ -18,6 +18,20 @@ export class Nav extends HTMLElement {
                 <style>${css}</style>
                 ${html}
             `;
+
+            this.shadowRoot.querySelectorAll('[data-screen]').forEach((item) => {
+                item.addEventListener('click', () => {
+                    this.dispatchEvent(new CustomEvent('navigate', {
+                        bubbles: true,
+                        composed: true,
+                        detail: { screen: item.dataset.screen },
+                    }));
+                });
+            });
+
+            const activeScreen = this.getAttribute('screen');
+            this.shadowRoot.querySelector(`[data-screen="${activeScreen}"]`)?.classList.add('active');
+
         } catch (error) {
             console.error("Error loading nav component:", error);
         }

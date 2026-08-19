@@ -1,0 +1,25 @@
+{
+  "name": "Project Management App",
+  "short_name": "Project Manager",
+  "description": "A focused project management app for tasks, schedules, and team planning.",
+  "start_url": "./index.html?screen=dashboard",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f6f8fb",
+  "theme_color": "#1479e9",
+  "icons": [
+    {
+      "src": "assets/img.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/img.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

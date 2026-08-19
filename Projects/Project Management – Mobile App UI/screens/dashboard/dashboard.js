@@ -1,4 +1,4 @@
-import { loadCSS, loadHTML } from '../../utils/loader.js';
+import { loadCSS, loadHTML } from '../../utils/loader.js?v=6';
 
 export class Dashboard extends HTMLElement {
     constructor() {
@@ -18,7 +18,9 @@ export class Dashboard extends HTMLElement {
             <style>${css}</style>
             ${html}
         `;
-            
+
+            this.renderTaskAnalytics();
+
             // Initialize chart after DOM is loaded
             this.initializeChart();
         } catch (error) {
@@ -26,10 +28,31 @@ export class Dashboard extends HTMLElement {
         }
     }
 
-    initializeChart() {
+    // Yeh method local tasks se dashboard ke live completion numbers calculate karta hai.
+    renderTaskAnalytics() {
+        const tasks = JSON.parse(localStorage.getItem('project-manager-tasks') || '[]');
+        const total = tasks.length;
+        const completed = tasks.filter((task) => task.completed).length;
+        const active = total - completed;
+        const percentage = (value) => total ? Math.round((value / total) * 100) : 0;
+        const completedPercent = this.shadowRoot.querySelector('#completed-percent');
+        const activePercent = this.shadowRoot.querySelector('#active-percent');
+        const backlogPercent = this.shadowRoot.querySelector('#backlog-percent');
+        if (completedPercent) completedPercent.textContent = `${percentage(completed)}%`;
+        if (activePercent) activePercent.textContent = `${percentage(active)}%`;
+        if (backlogPercent) backlogPercent.textContent = `${total ? percentage(tasks.filter((task) => !task.dueDate).length) : 0}%`;
+    }
+
+    // Yeh method chart ko render karta hai aur offline CDN par readable fallback deta hai.
+    initializeChart(attempt = 0) {
         // Wait for ApexCharts to be available
         if (typeof ApexCharts === 'undefined') {
-            setTimeout(() => this.initializeChart(), 100);
+            if (attempt < 20) {
+                setTimeout(() => this.initializeChart(attempt + 1), 100);
+            } else {
+                const chartElement = this.shadowRoot.querySelector('#chart');
+                if (chartElement) chartElement.innerHTML = '<div class="chart-fallback" role="img" aria-label="Average completion 74 percent"><strong>74%</strong><span>Average completion</span></div>';
+            }
             return;
         }
 

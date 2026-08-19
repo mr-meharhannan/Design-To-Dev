@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.screen {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: max(16px, env(safe-area-inset-top)) clamp(14px, 4vw, 28px) 108px;
+    box-sizing: border-box;
+    font-family: var(--font-family, 'Nunito', sans-serif);
+    background: var(--page-background-color, #f5f5f5);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.screen .screen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#back {
+    border: 1px solid lightgrey;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#back i {
+    color: grey;
+    font-size: 20px;
+}
+
+#screen-title {
+    font-size: 32px;
+    font-weight: bolder;
+    color: var(--text-color, #333);
+}
+
+#today-btn { border: 0; border-radius: 8px; padding: 9px 14px; color: #1479e9; background: #e8f2ff; font: inherit; font-weight: 700; cursor: pointer; }
+
+
+/* style.css */
+:root {
+  --primary-color: #007aff; /* Apple-style blue */
+  --bg-color: #f2f2f7;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 10px;
+}
+
+.calendar-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: min(100%, 520px);
+  margin: 20px auto;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 12px; /* Large tap target for mobile */
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.weeks-grid, .days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.weeks-grid div {
+  font-weight: 600;
+  color: #8e8e93;
+  padding-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.days-grid div {
+  padding: 12px 0; /* Ensures effortless thumb-tapping */
+  font-size: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.days-grid button { border: 0; background: transparent; font: inherit; padding: 12px 0; color: #202938; cursor: pointer; }
+.days-grid button.selected-day { outline: 2px solid #1479e9; outline-offset: -2px; }
+
+/* Highlight today's date */
+.days-grid .today {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+
+.days-grid button.today { background-color: var(--primary-color); color: white; font-weight: bold; }
+.days-grid button { min-height: 42px; }
+
+/* Dim padding days belonging to adjacent months */
+.days-grid .inactive-day {
+  color: #c7c7cc;
+}
+
+
+#today {
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.today-heading { display: flex; justify-content: space-between; align-items: center; max-width: 400px; margin: 24px auto 0; color: var(--primary-color); font-weight: bold; }
+.today-heading #selected-date { color: #8e8e93; font-size: 13px; font-weight: 600; }
+.scheduled-task { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; max-width: 400px; padding: 15px 18px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+.scheduled-task strong { color: var(--text-color, #333); }.scheduled-task .priority { font-size: 12px; font-weight: 700; }.priority.high { color: #dc4b4b; }.priority.medium { color: #c27b10; }.priority.low { color: #228a64; }.no-scheduled-tasks { color: #8e8e93; font-size: 14px; }
+
+#today-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 400px;
+}
+
+#task-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#task-title {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+#task-time {
+    color: var(--text-color, #666);
+    font-size: 0.85rem;
+}
+
+#profiles {
+    display: flex;
+    gap: 8px;
+}
+
+#profile {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) { .calendar-container { padding: 24px; } .days-grid button { min-height: 48px; } }

@@ -1,29 +1,29 @@
 <div id="dashboard">
-    <c-nav></c-nav>
+    <c-nav screen="dashboard"></c-nav>
     <c-dashboardheader></c-dashboardheader>
     <div id="dashboard-analytics">
         <div id="chart"></div>
         <div id="tasks-analytics">
-            <div id="task-box">
+            <div id="task-box" data-status="completed">
                 <div id="task">
                     <i class="fa-solid fa-circle" style="color: green;"></i>
                     <p>Project Done</p>
                 </div>
-                <span>50%</span>
+                <span id="completed-percent">0%</span>
             </div>
-            <div id="task-box">
+            <div id="task-box" data-status="active">
                 <div id="task">
                     <i class="fa-solid fa-circle" style="color: orange;"></i>
                     <p>In Progress</p>
                 </div>
-                <span>25%</span>
+                <span id="active-percent">0%</span>
             </div>
-            <div id="task-box">
+            <div id="task-box" data-status="backlog">
                 <div id="task">
                     <i class="fa-solid fa-circle" style="color: red;"></i>
                     <p>Backlog</p>
                 </div>
-                <span>15%</span>
+                <span id="backlog-percent">0%</span>
             </div>
         </div>
     </div>

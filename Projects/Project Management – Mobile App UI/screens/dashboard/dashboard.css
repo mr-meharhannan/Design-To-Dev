@@ -2,10 +2,14 @@
     color: var(--text-color);
     font-family: var(--font-family);
     min-height: 100vh;
-    padding: 0px 10px;
-    background: linear-gradient(180deg, #00a2ff3f 20%, #fdfdfd 100%);
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 clamp(12px, 3vw, 32px) 110px;
+    background: var(--page-background-color);
     box-sizing: border-box;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #chart {
@@ -13,13 +17,19 @@
   max-width: 150px;
 }
 
+.chart-fallback { display: grid; place-items: center; width: 140px; height: 140px; border: 12px solid #1479e933; border-top-color: #1479e9; border-radius: 50%; color: #202938; text-align: center; }.chart-fallback strong { font-size: 22px; }.chart-fallback span { max-width: 80px; color: #7b8494; font-size: 10px; }
+
 #dashboard-analytics {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 100px;
-    gap: 50px;
+    gap: clamp(18px, 6vw, 72px);
     width: 100%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #tasks-analytics {
@@ -27,7 +37,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
+    width: min(100%, 340px);
+    min-width: 0;
     gap: 4px;
 }
 
@@ -45,7 +56,6 @@
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  margin: 0;
 }
 
 #task i {
@@ -54,16 +64,26 @@
 }
 #task p {
   margin: 0;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: bolder;
+  white-space: nowrap;
 }
 #task span {
-  font-size: 8px;
+  font-size: 14px;
   color: var(--text-color);
+  font-weight: bolder;
+  white-space: nowrap;
 }
 
 #todaytask {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: bolder;
   color: var(--text-color);
   margin-top: 20px;
+  overflow-wrap: anywhere;
 }
+
+#dashboard-analytics > * { min-width: 0; }
+
+@media (max-width: 480px) { #dashboard-analytics { margin-top: 86px; gap: 16px; } #task p { font-size: 13px; } #task span { font-size: 12px; } #chart { max-width: 125px; } }
+@media (min-width: 768px) { #dashboard-analytics { margin-top: 110px; } }
