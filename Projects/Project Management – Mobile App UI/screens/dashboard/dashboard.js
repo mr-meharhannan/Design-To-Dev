@@ -39,17 +39,17 @@ export class Dashboard extends HTMLElement {
         const options = {
             series: [68, 82, 54, 91],
             chart: {
-                height: 200,
+                height: 140,
                 type: 'radialBar',
             },
             plotOptions: {
                 radialBar: {
                     dataLabels: {
                         name: {
-                            fontSize: '22px',
+                            fontSize: '8px',
                         },
                         value: {
-                            fontSize: '16px',
+                            fontSize: '6px',
                         },
                         total: {
                             show: true,
