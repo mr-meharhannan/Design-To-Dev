@@ -1,0 +1,50 @@
+#dashboardcards {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    background-color: #0beef22b;
+    border-radius: 10px;
+    margin-bottom: auto;
+    border: 1px solid #0beef2;
+}
+
+#card-priority {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f3f3;
+    height: 20px;
+    padding: 5px;
+    border-radius: 25px;
+    width: 100px;
+    white-space: nowrap;
+}
+
+#priority {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    text-align: center;
+}
+
+#task-heading {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+
